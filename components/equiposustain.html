@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Nuestro Equipo E-Tech Sustain</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
+
+/*font-family: 'Roboto', sans-serif;*/
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .equipo-title {
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #011536;
+        font-size: 2rem;
+        overflow: hidden;
+            
+      }
+
+      .equipo-title::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #03BA85, #037F83, #011536); /* Colores degradados */
+            transform: translateX(-100%);
+            transition: transform 0.5s ease; /* Duración y tipo de transición */
+            z-index: -1;
+            top:0;
+        }
+
+        .equipo-title:hover::before {
+            transform: translateX(0);
+        }
+
+      .equipo-title img {
+        margin-left: 10px;
+      }
+
+      .divs-section {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .div-item {
+        flex: 1;
+        max-width: 300px;
+        /*border: 1px solid #ddd;*/
+        padding: 20px;
+        text-align: center;
+        margin: 10px;
+      }
+
+      img.formatofoto {
+        width: 86%;
+      }
+
+      img.equipoicon {
+        width: 6%;
+      }
+
+      .seccion-titulo {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .productos-destacados {
+        display: flex;
+        overflow: hidden;
+        margin: 20px;
+      }
+
+      .producto-card {
+        flex: 0 0 calc(25% - 20px);
+        margin-right: 20px;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0px 4px 4px rgba(4, 205, 182, 0.25);
+      }
+
+      .producto-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .producto-info {
+        padding: 10px;
+        background-color: #f8f8f8;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0px 4px 4px rgba(4, 205, 182, 0.25);
+      }
+
+      .producto-info h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .producto-info p {
+        margin: 8px 0;
+        font-size: 18px;
+      }
+
+      .producto-precio {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .flecha-izquierda,
+      .flecha-derecha {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 25px;
+        cursor: pointer;
+        color: #03BA85;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .flecha-izquierda:hover,
+      .flecha-derecha:hover {
+        color: #2980b9;
+        font-weight: bold;
+      }
+
+      .flecha-izquierda {
+        left: 0;
+      }
+
+      .flecha-derecha {
+        right: 0;
+      }
+
+      h2 {
+    color: #011536;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 0 0 -26px;
+    padding: 5px;
+}
+
+button.add-to-cart-btn {
+  background-color: #03BA85;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    
+}
+
+button.add-to-cart-btn:hover {
+    background-color: #011536;
+}
+
+h3.textnames {
+    font-size: 1.5rem!important ;
+    color: #011536;
+    margin-bottom: -24px;
+}
+
+p.textdev {
+    font-size: 1.3rem!important ;
+    color: #03BA85;
+    margin-bottom: -13px;
+}
+
+
+
+
+    </style>
+    
+</head>
+<body>
+
+  <!-- Título y Botón de Visualización - Nuestro Equipo -->
+  <div class="equipo-title" onclick="toggleEquipo()">
+    <h2>Nuestro Equipo</h2>
+    <img class="equipoicon" src="/assets/equipo-icon-e-tech-sustain.svg" alt="Icono de equipo">
+  </div>
+
+  <!-- Sección de Divs Responsivos - Nuestro Equipo -->
+  <section class="divs-section" id="equipoContainer">
+    <!-- Miembros del Equipo -->
+
+        <!-- Sección de Divs Responsivos -->
+  <section class="divs-section" id="equipoContainer">
+    <!-- Miembros del Equipo -->
+    <div class="div-item">
+      <img class="formatofoto" src="/assets/equipo-e-tech-sustain-eli.png" alt="Persona 1">
+      <h3 class="textnames">Eliana Reyes</h3>
+      <p class="textdev">Desarrolladora Full Stack</p>
+      <p> Manejo del front-end y el back-end, fusionando creatividad 
+         y solidez técnica para construir experiencias digitales.</p>
+    </div>
+    <div class="div-item">
+        <img class="formatofoto" src="/assets/equipo-e-tech-sustain-sara.png" alt="Persona 1">
+        <h3 class="textnames">Sara Salas</h3>
+        <p class="textdev">Desarrolladora Full Stack</p>
+        <p> Manejo del front-end y el back-end, fusionando creatividad 
+           y solidez técnica para construir experiencias digitales.</p>
+      </div>
+    <div class="div-item">
+        <img class="formatofoto" src="/assets/equipo-e-tech-sustain-jhoan.png" alt="Persona 1">
+        <h3 class="textnames">Jhoan Talaga</h3>
+        <p class="textdev">Desarrolladora Full Stack</p>
+        <p> Manejo del front-end y el back-end, fusionando creatividad 
+           y solidez técnica para construir experiencias digitales.</p>
+      </div>
+    <div class="div-item">
+        <img class="formatofoto" src="/assets/equipo-e-tech-sustain-lore.png" alt="Persona 1">
+        <h3 class="textnames">Lorena Montoya</h3>
+        <p class="textdev">Desarrolladora Full Stack</p>
+        <p> Manejo del front-end y el back-end, fusionando creatividad 
+           y solidez técnica para construir experiencias digitales.</p>
+      </div>
+  </section>
+
+    <!-- ... (los divs del equipo) ... -->
+  </section>
+
+  <!-- Sección de Productos Destacados -->
+  <div class="seccion-titulo">
+    <h2>Productos Destacados</h2>
+  </div>
+
+  <div class="productos-destacados">
+    <div class="flecha-izquierda" onclick="moverProductos(-1)">&#9665;</div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    <div class="producto-card">
+      <img src="/assets/e-tech-sustain-producto1.png" alt="Producto 1">
+      <div class="producto-info">
+        <h3>Combo Teclado con
+          Mouse CMK-188.</h3>
+        <p>Teclado súper genial.</p>
+        <p class="producto-precio">$50.000</p>
+        <button class="add-to-cart-btn">
+          <span class="btn-text">Añadir al Carrito</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        </div>
+    </div>
+    </div>
+    <div class="flecha-derecha" onclick="moverProductos(1)">&#9655;</div>
+  </div>
+
+  <script>
+    function toggleEquipo() {
+      var equipoContainer = document.getElementById('equipoContainer');
+      equipoContainer.style.display = equipoContainer.style.display === 'none' ? 'flex' : 'none';
+    }
+
+    var currentIndex = 0;
+    var totalProductos = document.querySelectorAll('.producto-card').length;
+
+    function moverProductos(direccion) {
+      var productosContainer = document.querySelector('.productos-destacados');
+      currentIndex = (currentIndex + direccion + totalProductos) % totalProductos;
+      var translateValue = -currentIndex * (100 / totalProductos) + '%';
+      productosContainer.style.transform = 'translateX(' + translateValue + ')';
+    }
+  </script>
+</body>
+</html>
