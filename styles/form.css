@@ -1,0 +1,165 @@
+.contact-section, .btn-send{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-section{
+  display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 20px;
+  align-items: center;
+  padding: 2rem;
+  width: 90vw;
+}
+.image-form-group{
+  background-image: url("/assets/card-presentation.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  margin-left: .5rem;
+}
+.field-form{
+  display: grid;
+  padding: 1rem 0;
+}
+.form-group-input{
+  position: relative;
+}
+.form-input{
+  width: 90%;
+	background: #fff;
+	border: 2px solid #d8d7d7;
+	border-radius: 5px;
+	padding: .5rem;
+	transition: .3s ease all;
+  resize: none;
+}
+.form-input:focus{
+  border: 2px solid #246460;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+.input-label{
+  display: flex;
+  gap: .5rem;
+  padding-bottom: .5rem;
+  font-weight: 500;
+}
+.input-label i{
+  font-size: .6rem;
+  margin-bottom: .5rem;
+  color: rgb(193, 17, 52);
+}
+.form-input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.form-input-error-active {
+	display: block;
+}
+.form-status {
+	position: absolute;
+	right: 70px;
+	top: 10px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+.form-status-active {
+  opacity: 1;
+}
+.form-status i{
+  color: #246460;
+}
+.form-status i:hover{
+  color: #193e3e;
+}
+.btn-send{
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background: #246460;
+  color: #fff;
+  font-weight: 500;
+  width: 95%;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+.btn-send:hover{
+  background: #193e3e;
+}
+.form-message {
+	height: 45px;
+	line-height: 45px;
+	background: #f6a960;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+  width: fit-content;
+  margin: 1rem 0 ;
+}
+.form-message-active {
+	display: block;
+}
+.formulario__mensaje p {
+	margin: 0;
+}
+.form-message-success {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+.form-message-success-active {
+	display: block;
+}
+.field-form-correct .form-status {
+	color: #1ed12d;
+	opacity: 1;
+}
+.field-form-wrong .input-label {
+	color: #bb2929;
+}
+.field-form-wrong .form-status {
+	color: #bb2929;
+	opacity: 1;
+}
+.field-form-wrong .form-input {
+	border: 3px solid #bb2929;
+}
+
+
+@media screen and (max-width: 768px) {
+  .form-section{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    padding: 1rem 0;
+  }
+  .image-form-group{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin-left: 0;
+  }
+  .form-input{
+    width: 95%;
+  }
+  .btn-send{
+    width: 100%;
+  }
+  .form-status{
+    right: 40px;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+  .form-status{
+    right: 10px;
+  }
+  
+}
