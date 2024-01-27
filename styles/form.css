@@ -1,42 +1,37 @@
-.contact-section, .btn-send{
+.contact-section, .form-section{ 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.form-section{
-  display: grid;
-	grid-template-columns: 2fr 1fr;
-	gap: 20px;
-  align-items: center;
+#contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 900px;
   padding: 2rem;
   width: 90vw;
 }
-.image-form-group{
-  background-image: url("/assets/card-presentation.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 1rem;
-  height: 100%;
-  width: 100%;
-  margin-left: .5rem;
-}
 .field-form{
-  display: grid;
-  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
 }
 .form-group-input{
   position: relative;
 }
 .form-input{
-  width: 90%;
 	background: #fff;
 	border: 2px solid #d8d7d7;
 	border-radius: 5px;
 	padding: .5rem;
 	transition: .3s ease all;
   resize: none;
+  width: 100%;
+  max-width: 100%;
+  width: -webkit-fill-available;
+  width: -moz-available;
 }
 .form-input:focus{
   border: 2px solid #246460;
@@ -65,8 +60,8 @@
 }
 .form-status {
 	position: absolute;
-	right: 70px;
-	top: 10px;
+	right: 5px;
+  top: 10px;
 	z-index: 100;
 	font-size: 16px;
 	opacity: 0;
@@ -86,7 +81,7 @@
   background: #246460;
   color: #fff;
   font-weight: 500;
-  width: 95%;
+  width: 100%;
   font-size: 1rem;
   border: none;
   cursor: pointer;
@@ -112,12 +107,26 @@
 	margin: 0;
 }
 .form-message-success {
-	font-size: 14px;
+	font-size: 1.2rem;
+  font-weight: 500;
 	color: #119200;
-	display: none;
+  border: 3px solid #1192008f;
+  background-color: #fff;
+  text-align: center;
+  padding: 3rem;
+  border-radius: .5rem;
+  position: fixed;
+  top: -1000px;
+  right: 10px;
+  transition: top 1s ease-in-out;
+}
+.form-message-success i{
+  color: #119200;
+  font-size: 5rem;
 }
 .form-message-success-active {
-	display: block;
+	
+  top: 10px;
 }
 .field-form-correct .form-status {
 	color: #1ed12d;
@@ -136,30 +145,11 @@
 
 
 @media screen and (max-width: 768px) {
-  .form-section{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
+  .form-section, #contact-form{
     padding: 1rem 0;
   }
-  .image-form-group{
-    grid-row: 1/2;
-    grid-column: 1/2;
-    margin-left: 0;
+  .form-message-success{
+    padding: 1rem;
+    right: 0px;
   }
-  .form-input{
-    width: 95%;
-  }
-  .btn-send{
-    width: 100%;
-  }
-  .form-status{
-    right: 40px;
-  }
-  
-}
-@media screen and (max-width: 480px) {
-  .form-status{
-    right: 10px;
-  }
-  
 }
