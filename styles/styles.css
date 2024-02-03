@@ -601,6 +601,8 @@ p.textdev {
   padding: 1%;
 }
 
+
+
 @media (max-width: 768px) {
   .footer-content,
   .footer-bottom {
@@ -624,3 +626,4 @@ p.textdev {
     margin-bottom: 20px;
   }
 }
+
