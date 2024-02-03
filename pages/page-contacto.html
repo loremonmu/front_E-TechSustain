@@ -45,57 +45,55 @@
 
   <section class="contact-section">
     <h1 class="title">Contáctanos</h1>
-    <div class="form-section">
-      <form id="contact-form" autocomplete="off">
+    <form id="contact-form" autocomplete="off" action="https://formspree.io/f/xrgneyon" method="post">
 
-        <div class="field-form" id="field-name">
-          <label class=input-label for="name">Nombre: <span>*</span> </label>
-          <div class="form-group-input">
-            <input class="form-input" type="text" id="name" name="name" placeholder="Nombre completo" required>
-            <i class="form-status fas fa-times-circle"></i>
-          </div>
-          <p class="form-input-error">Ingrese un nombre completo válido. Puede incluir letras y espacios, y opcionalmente un número al final.</p>
+      <div class="field-form" id="field-name">
+        <label class=input-label for="name">Nombre: <span>*</span> </label>
+        <div class="form-group-input">
+          <input class="form-input" type="text" id="name" name="name" placeholder="Nombre completo" required>
+          <i class="form-status fas fa-times-circle"></i>
         </div>
+        <p class="form-input-error">Ingrese un nombre completo válido. Puede incluir letras y espacios, y opcionalmente un número al final.</p>
+      </div>
 
-        <div class="field-form" id="field-email">
-          <label class="input-label" for="email">Correo electrónico:</label>
-          <div class="form-group-input">
-            <input class="form-input" type="email" id="email" name="email" placeholder="correo@example.com" required>
-            <i class="form-status fas fa-times-circle"></i>
-          </div>
-          <p class="form-input-error">Ingrese una dirección de correo electrónico válida.</p>
+      <div class="field-form" id="field-email">
+        <label class="input-label" for="email">Correo electrónico:</label>
+        <div class="form-group-input">
+          <input class="form-input" type="email" id="email" name="email" placeholder="correo@example.com" required>
+          <i class="form-status fas fa-times-circle"></i>
         </div>
+        <p class="form-input-error">Ingrese una dirección de correo electrónico válida.</p>
+      </div>
 
-        <div class="field-form" id="field-phone">
-          <label class="input-label" for="phone">Teléfono:</label>
-          <div class="form-group-input">
-            <input class="form-input" type="tel" id="phone" name="phone" placeholder="Número de teléfono" required>
-            <i class="form-status fas fa-times-circle"></i>
-          </div>
-          <p class="form-input-error">Ingrese un número de teléfono válido.</p>
+      <div class="field-form" id="field-phone">
+        <label class="input-label" for="phone">Teléfono:</label>
+        <div class="form-group-input">
+          <input class="form-input" type="tel" id="phone" name="phone" placeholder="Número de teléfono" required>
+          <i class="form-status fas fa-times-circle"></i>
         </div>
+        <p class="form-input-error">Ingrese un número de teléfono válido.</p>
+      </div>
 
-        <div class="field-form" id="field-message">
-          <label class="input-label" for="message">Mensaje:</label>
-          <div class="form-group-input">
-            <textarea class="form-input" id="message" rows="3" name="message" placeholder="Escribe tu mensaje aquí"
-              required></textarea>
-            <i class="form-status fas fa-times-circle"></i>
-          </div>
-          <p class="form-input-error">Por favor, ingrese un mensaje.</p>
+      <div class="field-form" id="field-message">
+        <label class="input-label" for="message">Mensaje:</label>
+        <div class="form-group-input">
+          <textarea class="form-input" id="message" rows="3" name="message" placeholder="Escribe tu mensaje aquí"
+            required></textarea>
+          <i class="form-status fas fa-times-circle"></i>
         </div>
+        <p class="form-input-error">Por favor, ingrese un mensaje.</p>
+      </div>
 
-        <div class="form-message" id="form-message">
-          <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-        </div>
+      <div class="form-message" id="form-message">
+        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+      </div>
 
-        <input class="btn-send" id="submit" type="submit" value="Enviar">
-        <p class="form-message-success" id="form-message-success">Formulario enviado exitosamente!</p>
+      <input class="btn-send" id="submit" type="submit" value="Enviar">
+      <p class="form-message-success" id="form-message-success">Formulario enviado exitosamente! 
+      <br><br>  <i class="far fa-check-circle"></i>
+      </p>
 
-      </form>
-      <div class="image-form-group"></div>
-    </div>
-
+    </form>
   </section>
 
   <footer class="footer">
@@ -140,6 +138,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="/js/script.js"></script>
   <script src="/js/form.js"></script>
 </body>
