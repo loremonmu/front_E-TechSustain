@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtro y búsqueda de productos</title>
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+   
+    <link rel="stylesheet" href="styleListaDinamica.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="buscar-container">
+        <input
+          type="buscar"
+          id="buscar-input"
+          placeholder="Buscar Producto Aqui"
+        />
+        <button id="buscar">Buscar</button>
+      </div>
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('todo')">Todo</button>
+        <button class="button-value" onclick="filterProduct('tecnologia')">
+          Tecnologia
+        </button>
+        <button class="button-value" onclick="filterProduct('mujeres')">
+          Mujeres  
+        </button>
+        <button class="button-value" onclick="filterProduct('hombres')">
+          Hombres
+        </button>
+        <button class="button-value" onclick="filterProduct('belleza')">
+          Belleza
+        </button>
+        <button class="button-value" onclick="filterProduct('deporte')">
+          Deporte
+        </button>
+        <button class="button-value" onclick="filterProduct('salud')">
+          Salud
+        </button>
+        <button class="button-value" onclick="filterProduct('hogar')">
+          Hogar
+        </button>
+        <button class="button-value" onclick="filterProduct('descuentos')">
+          Descuentos
+        </button>
+        
+      </div>
+      <div id="products"></div>
+    </div>
+    
+    <script src="scriptListaDinamica.js"></script>
+  </body>
+</html>
