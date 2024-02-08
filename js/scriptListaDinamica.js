@@ -1,44 +1,43 @@
-
 let products = {
   data: [
     {
       productName: "Smart Watch SIM A1",
-      category: "tecnologia",
+      category: "tecnología",
       price: "46,900" + " COLOR: NEGRO",
       image: "/assets/assets lista dinamica/Smart-Watch-SIM.jpg",
            
     },
     {
       productName: "Mini Teclado Inalámbrico",
-      category: "tecnologia",
+      category: "tecnología",
       price: "19,200" + " COLOR: NEGRO, VERDE",
       image: "/assets/assets lista dinamica/mini-teclado.jpg",
            
     },
     {
       productName: "Consola Super Nintendo ",
-      category: "tecnologia",
+      category: "tecnología",
       price: "100,000" + " RETRO HDMI SF900",
       image: "/assets/assets lista dinamica/consola-videojuegos.jpg",
            
     },
     {
       productName: "Controlador Electrónico",
-      category: "tecnologia",
+      category: "tecnología",
       price: "15,600" + " PARA JUEGOS X8",
       image: "/assets/assets lista dinamica/controlador-electrico.jpg",
            
     },
     {
       productName: "DRONE 4K HD",
-      category: "tecnologia",
+      category: "tecnología",
       price: "90,900" + " CUATRO EJES",
       image: "/assets/assets lista dinamica/dron.jpg",
            
     },
     {
       productName: "LUCES LED ",
-      category: "tecnologia",
+      category: "tecnología",
       price: "46,900" + " KIT DE LUZ FLEXIBLE",
       image: "/assets/assets lista dinamica/luces-led.jpg",
            
@@ -269,34 +268,55 @@ let products = {
 };
 
 for (let i of products.data) {
-  //Create Card
+  // Crear la tarjeta
   let card = document.createElement("div");
-  //Card should have category and should stay hidden initially
+  // La tarjeta debe tener una clase de categoría y debe permanecer oculta inicialmente
   card.classList.add("card", i.category, "hide");
-  //image div
+
+  // Contenedor de imagen
   let imgContainer = document.createElement("div");
   imgContainer.classList.add("image-container");
-  //img tag
+
+  // Etiqueta de imagen
   let image = document.createElement("img");
   image.setAttribute("src", i.image);
   image.classList.add("imageLista");
   imgContainer.appendChild(image);
   card.appendChild(imgContainer);
-  //container
+
+  // Contenedor
   let container = document.createElement("div");
   container.classList.add("container");
-  //product name
+
+  // Nombre del producto
   let name = document.createElement("h5");
   name.classList.add("product-name");
   name.innerText = i.productName.toUpperCase();
   container.appendChild(name);
-  //price
+
+  // Precio
   let price = document.createElement("h6");
   price.innerText = "$" + i.price;
   container.appendChild(price);
 
+  // Botón "Añadir al carrito" con icono de carrito
+  let addButton = document.createElement("button");
+  addButton.innerHTML = '<i class="fas fa-shopping-cart"></i> Añadir al carrito';
+  addButton.addEventListener("click", function() {
+    // Función para manejar el evento de clic del botón
+    addToCart(i.productId); // Aquí deberías pasar el ID del producto
+  });
+  container.appendChild(addButton);
+
   card.appendChild(container);
   document.getElementById("products").appendChild(card);
+}
+
+// Función para añadir productos al carrito
+function addToCart(productId) {
+  // Aquí puedes escribir la lógica para añadir el producto al carrito
+  // Por ejemplo, puedes tener una lista de productos en el carrito y añadir el producto correspondiente a esa lista.
+  console.log("Producto añadido al carrito:", productId);
 }
 
 //parameter passed from button (Parameter same as category)
@@ -356,3 +376,111 @@ document.getElementById("buscar").addEventListener("click", () => {
 window.onload = () => {
   filterProduct("todo");
 };
+
+// Function to render products
+function renderizarProductos() {
+  baseDeDatos.forEach((info) => {
+    // Create the product card structure
+    const miNodo = document.createElement("div");
+    miNodo.classList.add("card", "col-sm-4");
+
+    // Create the card body
+    const miNodoCardBody = document.createElement("div");
+    miNodoCardBody.classList.add("card-body");
+
+    // Create the product title
+    const miNodoTitle = document.createElement("h5");
+    miNodoTitle.classList.add("card-title");
+    miNodoTitle.textContent = info.nombre;
+
+    // Create the product image
+    const miNodoImagen = document.createElement("img");
+    miNodoImagen.classList.add("img-fluid");
+    miNodoImagen.setAttribute("src", info.imagen);
+
+    // Create the product price
+    const miNodoPrecio = document.createElement("p");
+    miNodoPrecio.classList.add("card-text");
+    miNodoPrecio.textContent = `${info.precio}${divisa}`;
+
+    // Create the "Add to cart" button with an icon
+    const miNodoBoton = document.createElement("button");
+    miNodoBoton.classList.add("btn", "btn-primary");
+    miNodoBoton.textContent = "Add to cart";
+
+    const miNodoIcono = document.createElement("i");
+    miNodoIcono.classList.add("fas", "fa-cart-plus");
+    miNodoBoton.appendChild(miNodoIcono);
+
+    // Add the click event listener to the button
+    miNodoBoton.addEventListener("click", () => {
+      anyadirProductoAlCarrito(info.id);
+    });
+
+    // Append elements to the card body
+    miNodoCardBody.appendChild(miNodoImagen);
+    miNodoCardBody.appendChild(miNodoTitle);
+    miNodoCardBody.appendChild(miNodoPrecio);
+    miNodoCardBody.appendChild(miNodoBoton);
+
+    // Append the card body to the product node
+    miNodo.appendChild(miNodoCardBody);
+
+    // Append the product node to the DOM
+    DOMitems.appendChild(miNodo);
+  });
+}
+
+// ...
+
+for (let i of products.data) {
+  // Create Card
+  let card = document.createElement("div");
+  // Card should have category and should stay hidden initially
+  card.classList.add("card", i.category, "hide");
+
+  // image div
+  let imgContainer = document.createElement("div");
+  imgContainer.classList.add("image-container");
+
+  // img tag
+  let image = document.createElement("img");
+  image.setAttribute("src", i.image);
+  image.classList.add("imageLista");
+  imgContainer.appendChild(image);
+  card.appendChild(imgContainer);
+
+  // container
+  let container = document.createElement("div");
+  container.classList.add("container");
+
+  // product name
+  let name = document.createElement("h5");
+  name.classList.add("product-name");
+  name.innerText = i.productName.toUpperCase();
+  container.appendChild(name);
+
+  // price
+  let price = document.createElement("h6");
+  price.innerText = "$" + i.price;
+  container.appendChild(price);
+
+  // Add "Add to cart" button
+  let addToCartButton = document.createElement("button");
+  addToCartButton.innerText = "Agregar al carrito";
+  addToCartButton.classList.add("add-to-cart-button");
+
+  // Add click event listener to the "Add to cart" button
+  addToCartButton.addEventListener("click", () => {
+    // You can customize this function to add the product to the cart
+    // For now, let's just log a message to the console
+    console.log("Producto agregado al carrito:", i.productName);
+  });
+
+  container.appendChild(addToCartButton);
+
+  card.appendChild(container);
+  document.getElementById("products").appendChild(card);
+}
+
+// ...

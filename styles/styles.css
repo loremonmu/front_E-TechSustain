@@ -269,6 +269,7 @@ h1.nos{
   }
 }
 
+
 /* Inicio de nuestro equipo / destacados */
 
 .equipo-title {
@@ -342,7 +343,7 @@ h1#title-head {
 }
 
 /*=============== CARD ===============*/
-.container{
+.contaainer{
   display: flex;
   justify-content: center;
   align-items: center;
