@@ -1,0 +1,46 @@
+
+
+body {
+    background: url("/assets/img/post-registro2.jpg"); 
+    background-size: cover;
+    height: 110vh;
+    color: #ffffff;
+    margin: 0;
+}
+
+
+.container {
+   
+    padding: 30px; 
+    background-color: #011536;
+    border:05px solid #ffffff;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+    border-radius: 40px;
+      
+   
+}
+
+h2 {
+    color: #03ba85;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #03ba85;
+    border-color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #131b36;
+    border-color: #ffffff;
+}
+@media only screen and (max-width: 900px) {
+    body {
+        background-size: cover;
+        height: 90vh;
+
+    }
+
+}
