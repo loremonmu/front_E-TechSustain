@@ -1,5 +1,31 @@
 
 
+/* Inicio Banner de 1 imagen*/
+
+.banner-contentimg {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden
+}
+
+.banner-contentimg img {
+  width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  display: block; /* Elimina el espacio en blanco debajo de la imagen */
+}
+
+
+.banner-contentimg h1 {
+  margin: 0;
+  padding: 10px;
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: #03ba85;
+  border-radius: 0 0 15px 15px;
+  color: #fff;
+}
+/*Fin Banner de 1 imagen*/
+
 .wrapper {
   width: 85%;
   margin: 0 auto;
@@ -9,21 +35,37 @@
 }
 #buscar-container input {
   background-color: transparent;
-  width: 40%;
-  border-bottom: 3px solid #03ba85;
+  width: 35%;
+  border: 3px solid #03ba85;
   padding: 1em 0.3em;
-  margin-left: 2em;
+  /* margin-left: 2em; */
+  border-radius: 10px;
 }
+
 #buscar-container input:focus {
-  border-bottom-color: #064466;
+  border-bottom-color: #7cccf6;
 }
 #buscar-container button {
+  padding: 1em 2em;
+  margin-left: em;
+  background-color: #011536;
+  color: #ffffff;
+  border-radius: 20px;
+  margin-top: 0.5em;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+#buscar-container button:hover {
   padding: 1em 2em;
   margin-left: em;
   background-color: #03ba85;
   color: #ffffff;
   border-radius: 20px;
   margin-top: 0.5em;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 .button-value {
   border: 4px solid #03ba85;
@@ -33,6 +75,8 @@
   color: #064466;
   cursor: pointer;
   margin-top: 1%;
+  font-size: 0.8rem;
+  font-weight: bold;
 
 }
 .active {
@@ -46,45 +90,83 @@
   padding: 1em 0;
 }
 .card {
-  background-color: #03ba85;
+  background-color: #021d2b;
   max-width: 20em;
   margin-top: 1em;
-  padding: 1em;
+  padding: 0;
   border-radius: 20px;
-  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
-  border:5px solid #05334d;
-  box-shadow: 0 6px 6px 0 rgb(6, 79, 97), 0 6px 20px 0 rgba(36, 28, 28, 0.19);
-    float: left;
+  box-shadow: 0 6px 6px 0 rgb(155, 220, 236), 0 6px 20px 0 rgba(36, 28, 28, 0.19);
+  float: left;
   
     
 }
-
 .image-container {
+  position: relative;
+  /*background-color: white;
+  padding-top: 1.5rem;*/
+  margin-bottom: -0.75rem;
   text-align: center;
+  border-radius: 20px 20px 0 0;
   
 }
 .imageLista {
   max-width: 100%;
   object-fit: contain;
-  height: 15em;
-  border-radius: 10%;
-  border:4px solid #05334d;
+  /*height: 15em;*/
+  border-radius: 20px 20px 0 0;
+  
 }
+
 .container {
-  font-size: 25px;
-  padding-top: 1em;
-  color: #fffdfd;
+  /*background-color: #021d2b;*/
+  padding: 1.5rem 1.5rem;
+  border-radius: 0 0 20px 20px;
   text-align: center;
+  position: relative;
+  /* z-index: 10; */
 }
 .container h5 {
-  font-weight: 700;
-  color: #05334d;
-  font-size: 18px;
-  padding-bottom: 1em;
+  font-size: 1.25rem;
+  color: #03BA85;
+  margin-bottom: -1.25rem; 
+}
+.container h6 {
+font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: white;
 }
 .hide {
   display: none;
 }
+
+/* Estilos para el botón Añadir al carrito */
+button {
+ 
+  display: inline-block;
+  background-color: #03BA85;
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: #011536;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/* Estilo para el icono dentro del botón */
+button i {
+  margin-left: 5px; /* Margen izquierdo para separar el icono del texto */
+}
+
+/* Cambio de color al pasar el cursor por encima */
+button:hover {
+  background-color: #fff; 
+  color: #03BA85; 
+}
+
+
 @media screen and (max-width: 720px) {
   img {
     max-width: 100%;

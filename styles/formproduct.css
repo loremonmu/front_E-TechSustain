@@ -1,26 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap");
+
+/* Inicio Banner de 1 imagen*/
+
+.banner-contentimg {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden
+}
+
+.banner-contentimg img {
+  width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  display: block; /* Elimina el espacio en blanco debajo de la imagen */
+}
+
+
+.banner-contentimg h1 {
+  margin: 0;
+  padding: 10px;
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: #03ba85;
+  border-radius: 0 0 15px 15px;
+  color: #fff;
+}
+
+/*Fin Banner de 1 imagen*/
+
+img.iconlogo {
+  display: block;
+  margin: 0 auto;
+  width: 7%;
+  margin-bottom: -11px;
+}
+
+img.formatofot {
+  width: 66%;
+}
+
+h3.unet  {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  color: #064466;
+  margin-bottom: auto;
+}
+p.sosteni  {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  
+}
+
+h3.textname {
+  font-size: 1.5rem !important;
+  color: #011536;
+  
+}
+
+h3.ayud  {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #064466;
+  margin-bottom: auto;
+}
+
+.divs-secti {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+ 
+}
+
+.contrainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgb(3 186 133 / 39%), rgb(6 68 102 / 15%));
+  padding: 30px;
+  width: 100%;
+  margin-bottom: -113px;
+}
+
 /* Parte inicio de formulario vender  */
 .form-container {
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+  margin: 20px auto;
+  padding: 53px;
+  /*background-color: #fff;*/
+  border-radius: 8px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 32%;
   }
   
   .sell-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
     display: block;
     width: 100%;
     padding: 25px;
-    margin-bottom: 50px;
     background: linear-gradient(75deg, rgba(0,89,145,1) 0%, rgba(3,186,133,1) 41%, rgba(0,89,145,1) 100%);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: 500;
   }
   
   .sell-button:hover {
-    background-color: #023D9C;
+    background: rgb(1, 21, 54);
+    color: #fff;
   }
   
   .form-section {
@@ -99,3 +193,5 @@
   cursor: pointer;
   }
   /* Fin formulario compras*/
+
+  

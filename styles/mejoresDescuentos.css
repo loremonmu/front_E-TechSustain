@@ -1,0 +1,25 @@
+/* Inicio Banner de 1 imagen*/
+
+.banner-contentimg {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden
+}
+
+.banner-contentimg img {
+  width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  display: block; /* Elimina el espacio en blanco debajo de la imagen */
+}
+
+
+.banner-contentimg h1 {
+  margin: 0;
+  padding: 10px;
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: #03ba85;
+  border-radius: 0 0 15px 15px;
+  color: #fff;
+}
+  /*Fin Banner de 1 imagen*/
