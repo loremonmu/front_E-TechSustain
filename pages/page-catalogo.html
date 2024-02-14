@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Productos</title>
   <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="stylesheet" href="/styles/cart.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/styles/styleListaDinamica.css"/>
+  <link rel="stylesheet" href="/styles/styleListaDinamica.css" />
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <li><a href="/pages/page-catalogo.html" class="activo">Catálogo</a></li>
         <li><a href="/pages/page-productos.html" class="activo">Mis Productos</a></li>
         <li><a href="/pages/page-compras.html" class="activo">Mis Compras</a></li>
-        <li><a href="/pages/page-descuentos.html" class="activo">Blog</a></li>
+        <li><a href="/pages/page-blog.html" class="activo">Blog</a></li>
         <li><a href="/pages/page-contacto.html" class="activo">Contacto</a></li>
       </ul>
       <div class="btn-menu">
@@ -29,7 +30,7 @@
           <i class="fas fa-user"></i>
           <span class="btn-text">Perfil</span>
         </a>
-        <div class="icon">
+        <div id="open-cart" class="icon">
           <i class="fas fa-shopping-cart"></i>
           <span class="btn-text">Carrito</span>
         </div>
@@ -47,18 +48,14 @@
     <div class="banner-contentimg">
       <img src="/assets/e-tech-sustain-vender-sostenible.png" alt="Banner">
       <h1>Nuestro <br>
-         Catálogo</h1>
-      
+        Catálogo</h1>
+
     </div>
   </section>
 
   <section class="wrapper">
     <div id="buscar-container">
-      <input
-        type="buscar"
-        id="buscar-input"
-        placeholder="Buscar Producto Aquí"
-      />
+      <input type="buscar" id="buscar-input" placeholder="Buscar Producto Aquí" />
       <button id="buscar">Buscar</button>
     </div>
     <div id="buttons">
@@ -67,7 +64,7 @@
         Tecnología
       </button>
       <button class="button-value" onclick="filterProduct('mujeres')">
-        Mujeres  
+        Mujeres
       </button>
       <button class="button-value" onclick="filterProduct('hombres')">
         Hombres
@@ -87,10 +84,15 @@
       <button class="button-value" onclick="filterProduct('descuentos')">
         Descuentos
       </button>
-      
+
     </div>
     <div id="products"></div>
-    <br>   
+    <br>
+    
+    <div id="pagination">
+
+    </div>
+
   </section>
 
 
@@ -130,7 +132,7 @@
     <div class="footer-bottom">
       <p>© 2024 E-TechSustain. Todos los derechos reservados. | Condiciones y restricciones | Política de privacidad |
         Menciones legales</p>
-        <div class="espa"></div>
+      <div class="espa"></div>
       <div class="payment-options">
         <img src="/assets/e-tech-pagos.png" alt="Visa">
       </div>
@@ -138,8 +140,28 @@
     </div>
   </footer>
 
+  <section id="id-container-cart" class="container-cart">
+    <div class="items-contain">
+      <h1>Carrito</h1>
+      <i id="close-btn" class="fa fa-close"></i>
+    </div>
+    <div id="cart-section">
+      <!-- Aquí se renderizarán los productos del carrito -->
+    </div>
+    <div class="subtotal">
+      <h3>Total</h3>
+      <h3 id="total-cart"></h3>
+    </div>
+    <div class="company-info">
+      <img src="/assets/equipo-icon-e-tech-sustain.svg" alt="Logo" />
+      <h4>E-Tech-Sustain</h4>
+      <span>2024 &copy;</span>
+    </div>
+  </section>
   <script src="/js/script.js"></script>
   <script src="/js/scriptListaDinamica.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

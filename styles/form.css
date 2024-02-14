@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap");
 /*banner 1 img */
 .banner-contentimg {
   width: 100%;
@@ -10,7 +11,6 @@
   height: auto; /* Permite que la altura se ajuste automáticamente */
   display: block; /* Elimina el espacio en blanco debajo de la imagen */
 }
-
 
 .banner-contentimg h1 {
   margin: 0;
@@ -57,6 +57,7 @@
   max-width: 100%;
   width: -webkit-fill-available;
   width: -moz-available;
+  font-family:"Roboto", sans-serif ;
 }
 .form-input:focus{
   border: 2px solid #246460;
@@ -69,8 +70,8 @@
   padding-bottom: .5rem;
   font-weight: 500;
 }
-.input-label i{
-  font-size: .6rem;
+.input-label span{
+  font-size: 1rem;
   margin-bottom: .5rem;
   color: rgb(193, 17, 52);
 }

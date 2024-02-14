@@ -10,6 +10,9 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  scrollbar-color: #03ba85 #fff;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 /* Inicio navbar */
@@ -76,12 +79,6 @@ body {
   display: none;
 }
 
-a.activo:active {
-  color: #03BA85;
-}
-
-
-
 .about-section {
   max-width: 600px;
   margin: 50px auto;
@@ -110,7 +107,6 @@ h1.nos{
     cursor: pointer;
   }
   .menu-mobile {
-    /* translate the menu out of page and in action btn appers */
     transform: translateY(-100%);
     position: fixed;
     width: 100%;
