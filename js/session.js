@@ -37,7 +37,7 @@ if (loggedInUser) {
 function logout() {
     const arrayUsers = JSON.parse(localStorage.getItem('users')) || [];
     const logOutUser = arrayUsers.find(user => user.isLoggedIn === true);
-    console.log(logOutUser);
+    //console.log(logOutUser);
     logOutUser.isLoggedIn = false;
     localStorage.setItem('users', JSON.stringify(arrayUsers));
 

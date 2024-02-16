@@ -21,7 +21,7 @@ body {
 .nav-wrapper {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   background-color: #fff;
   border-bottom: 10px solid;
   border-image: linear-gradient(to right, #03ba85, #064466);
@@ -60,7 +60,7 @@ body {
   height: 3px;
   background: linear-gradient(to right, #03ba85, #064466);
   position: absolute;
-  bottom: -3px;
+  bottom: -1px;
   left: 0;
 }
 .container-btns {
@@ -157,7 +157,7 @@ h1.nos{
     transform: translateY(-120%);
     position: fixed;
     width: 100%;
-    height: 65vh;
+    height: 75vh;
     top: 0;
     left: 0;
     bottom: 0;
@@ -172,6 +172,7 @@ h1.nos{
   }
   .list-menu {
     padding: 0;
+    margin-bottom: 2rem;
   }
   .menu-mobile .list-menu,
   .btn-menu, .container-btns {
