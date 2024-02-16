@@ -6,10 +6,13 @@
   overflow: hidden
 }
 
-.banner-contentimg img {
-  width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-  display: block; /* Elimina el espacio en blanco debajo de la imagen */
+.banner-contentimg #banner.img {
+  width: 100%;
+  /* Hace que la imagen se ajuste al ancho del contenedor */
+  height: auto;
+  /* Permite que la altura se ajuste automáticamente */
+  display: block;
+  /* Elimina el espacio en blanco debajo de la imagen */
 }
 
 
@@ -23,4 +26,19 @@
   color: #fff;
 }
 
-  /*Fin Banner de 1 imagen*/
+/*Fin Banner de 1 imagen*/
+
+.historial-shopping {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #064466;
+  margin-bottom: 20px;
+}
+
+.historial-shopping img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+  filter: grayscale(80%) hue-rotate(180deg);
+}
+

@@ -2,6 +2,12 @@
 
 let products = [
   {
+    productName: "Combo Teclado con Mouse CMK-188.",
+    category: "deporte",
+    price: "50000",
+    image: "/assets/e-tech-sustain-producto1.png",
+  },
+  {
     productName: "Zapatillas Inteligentes Adidas",
     category: "deporte",
     price: "500000",
@@ -44,9 +50,11 @@ products.forEach((product) => {
       <p class="card__description">
         ${product.price}
       </p>
-      <button class="card__button add-to-cart-button">
-        <i class="fas fa-shopping-cart"></i>Añadir al carrito
-      </button>
+      <a href="/pages/page-catalogo.html" class="card__button">
+        <button class="add-to-cart-button">
+          Conocer más <i class="fas fa-arrow-right"></i>
+        </button>
+      </a>
     </div>
 
   `;
