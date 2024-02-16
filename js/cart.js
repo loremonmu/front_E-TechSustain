@@ -1,13 +1,23 @@
-const cartBtn = document.getElementById("open-cart");
 const closeBtn = document.getElementById("close-btn");
 const showCart = document.getElementById("id-container-cart");
 const cartSection = document.getElementById("cart-section");
 const totalCart = document.getElementById("total-cart");
 
-cartBtn.addEventListener("click", () => {
-  showCart.classList.toggle("active");
-  menuMobile.classList.remove('active');
+document.addEventListener("DOMContentLoaded", function() {
+  const cartBtns = document.querySelectorAll("#open-cart");
+
+  cartBtns.forEach(function(cartBtn) {
+    cartBtn.addEventListener("click", function() {
+      showCart.classList.toggle("active");
+      menuMobile.classList.remove('active');
+    });
+  });
 });
+
+// cartBtn.addEventListener("click", () => {
+//   showCart.classList.toggle("active");
+//   menuMobile.classList.remove('active');
+// });
 closeBtn.addEventListener("click", () => {
   showCart.classList.remove("active");
 });
@@ -80,8 +90,8 @@ const renderCart = () => {
 
 cartSection.addEventListener("click", (event) => {
   const cart = getCart();
-  console.log(event.target);
-  console.log(cart);
+  //console.log(event.target);
+  //console.log(cart);
   const index = event.target.dataset.index;
 
   if (event.target.classList.contains("btn-sum")) {
