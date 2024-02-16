@@ -142,7 +142,6 @@ h1.nos{
 .nos{
   text-align: center;
 }
-
 @media screen and (max-width: 768px) {
   .nav-wrapper {
     justify-content: space-between;
@@ -486,7 +485,13 @@ h1#title-head {
   padding: .75rem 1.5rem;
   border-radius: .25rem;
   color: #011536;
+  cursor: pointer;
+}
+
+.card__button button{
+  background-color: transparent;
   font-weight: 600;
+  border: none;
 }
 
 .card__button:hover{
@@ -531,6 +536,63 @@ h1#title-head {
 .swiper-pagination-bullet-active{
   background-color: #03ba85;
 }
+
+h3.unet  {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  color: #064466;
+  margin-bottom: auto;
+}
+
+p.ayud {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #068c96;
+  margin-bottom: auto;
+}
+
+img.formatfot {
+width: 10%;
+display: block;
+margin: 0 auto;
+}
+
+/*Servidor Discord */
+
+.rowconimg {
+  
+background-size: cover;
+background-position: center;
+background: linear-gradient(to right, rgb(3 186 133 / 39%), rgb(6 68 102 / 15%));
+padding: 2rem;
+position: relative;
+}
+
+.rowconimages{
+position: absolute; 
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('/assets/Image20240216140140.png');
+background-size: auto;
+background-repeat: repeat;
+opacity: 0.5;
+}
+
+.canalcomundis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  
+}
+
+/*Fin Servidor Discord */
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */

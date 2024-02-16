@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/styles/formproduct.css"/>
+  <link rel="stylesheet" href="/styles/formproduct.css" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="icon" href="/assets/favicon.png" type="image/png">
 </head>
@@ -21,12 +21,12 @@
     <a href="#" class="brand-logo"><img src="/assets/logo-e-tech-sustain.png" alt="Logo" /></a>
     <div class="menu-mobile">
       <ul class="list-menu">
-        <li><a href="/index.html" >Inicio</a></li>
-        <li><a href="/pages/page-catalogo.html" >Catálogo</a></li>
-        <li class="user-logged"><a href="/pages/page-productos.html" >Mis Productos</a></li>
-        <li class="user-logged"><a href="/pages/page-compras.html" >Mis Compras</a></li>
-        <li><a href="/pages/page-blog.html" >Blog</a></li>
-        <li><a href="/pages/page-contacto.html" >Contacto</a></li>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/pages/page-catalogo.html">Catálogo</a></li>
+        <li class="user-logged"><a href="/pages/page-productos.html">Mis Productos</a></li>
+        <li class="user-logged"><a href="/pages/page-compras.html">Mis Compras</a></li>
+        <li><a href="/pages/page-blog.html">Comunidad</a></li>
+        <li><a href="/pages/page-contacto.html">Contacto</a></li>
       </ul>
 
       <div class="container-btns logged-true">
@@ -57,31 +57,32 @@
     </div>
   </nav>
 
-  
+
   <section>
     <div class="banner-contentimg">
       <img src="/assets/e-tech-sustain-vender-sostenible-1.png" alt="Banner">
       <h1>Empezar a Vender <br>
-         Tus Productos</h1>
-      
+        Tus Productos</h1>
+
     </div>
 
     <div>
-    <h3 class="unet">📱💻🌍💰 <br>
-      <br> ¡Únete a la revolución tecnológica con E-tech Sustain!</h3>
-    <br>
-    
-  </div>
+      <h3 class="unet">📱💻🌍💰 <br>
+        <br> ¡Únete a la revolución tecnológica con E-tech Sustain!
+      </h3>
+      <br>
+
+    </div>
   </section>
 
   <!-- iconos -->
-  <div>  
+  <div>
     <img class="iconlogo" src="/assets/equipo-icon-e-tech-sustain.svg" alt="Icono sustain">
   </div>
 
   <!-- Sección de Divs Responsivos --->
   <section class="divs-secti" id="equipoContainer">
-    
+
 
     <!-- Sección de Divs Responsivos -->
     <section class="divs-secti" id="equipoContainer">
@@ -100,131 +101,133 @@
           <h3 class="textname">Venta rápida y segura</h3>
         </div>
       </div>
-      
+
     </section>
     <section class="contrainer">
-    <div>
-      <h3 class="ayud"> 
-        Ayuda al medio ambiente mientras despejas<br>
-        espacio en tu hogar y haces dinero al mismo tiempo.<br>
-        ¡Únete hoy mismo! Haz clic en el botón.</h3>
+      <div>
+        <h3 class="ayud">
+          Ayuda al medio ambiente mientras despejas<br>
+          espacio en tu hogar y haces dinero al mismo tiempo.<br>
+          ¡Únete hoy mismo! Haz clic en el botón.</h3>
         <br>
         <br>
-      
-    </div>
+
+      </div>
     </section>
-   <!-- formulario vender  -->
-<div class="form-container">
-  <button id="myBtn" class="sell-button">Empezar a Vender</button>
+    <!-- formulario vender  -->
+    <div class="form-container">
+      <button id="myBtn" class="sell-button">Empezar a Vender</button>
       <div id="myModal" class="modal">
-          <div class="modal-content">
-              <span class="close">&times;</span>
+        <div class="modal-content">
+          <span class="close">&times;</span>
 
-  <form id="product-form">
-      <div class="form-section">
-          <label for="product-name">Añade tu producto</label>
-          <input type="text" id="product-name" name="product-name" placeholder="Nombre del Producto">
+          <form id="product-form">
+            <div class="form-section">
+              <label for="product-name">Añade tu producto</label>
+              <input type="text" id="product-name" name="product-name" placeholder="Nombre del Producto">
+            </div>
+
+            <div class="form-section">
+              <label for="subcategory">Ingresa la subcategoría</label>
+              <select id="subcategory" name="subcategory" placeholder="Nombre del Producto">
+                <option value="tecnologia">Tecnología</option>
+                <option value="belleza">Belleza</option>
+                <option value="belleza">Hogar</option>
+                <option value="belleza">Deporte</option>
+                <option value="belleza">Salud</option>
+              </select>
+            </div>
+
+            <div class="form-section image-upload">
+              <label>Sube las imágenes</label>
+              <div class="image-upload-container">
+                <!-- acordarme opcion de subir imagen  -->
+                <input type="file" id="image-upload" name="image-upload" accept="image/*">
+              </div>
+            </div>
+
+            <div class="form-section">
+              <label for="price">Ponle un precio sostenible</label>
+              <input type="text" id="price" name="price" placeholder="$0.00">
+            </div>
+
+            <div class="form-section">
+              <input type="submit" value="Subir Producto">
+            </div>
+          </form>
+        </div>
       </div>
-
-      <div class="form-section">
-          <label for="subcategory">Ingresa la subcategoría</label>
-          <select id="subcategory" name="subcategory" placeholder="Nombre del Producto">
-              <option value="tecnologia">Tecnología</option>
-              <option value="belleza">Belleza</option>
-              <option value="belleza">Hogar</option>
-              <option value="belleza">Deporte</option>
-              <option value="belleza">Salud</option>
-          </select>
-      </div>
-
-      <div class="form-section image-upload">
-          <label>Sube las imágenes</label>
-          <div class="image-upload-container">
-              <!-- acordarme opcion de subir imagen  -->
-              <input type="file" id="image-upload" name="image-upload" accept="image/*">
+    </div>
+    <!-- Termina formulario  -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="logo-description">
+          <img src="/assets/e-tech-logo.png" alt="E-Tech Sustain Logo" class="footer-logo">
+          <p>E-TechSustain es un e-commerce centrado en tecnología y gaming, con una comunidad que promueve la
+            sostenibilidad ambiental. Facilita la compra, venta, subasta y recomendación de productos, contribuyendo a
+            la
+            reducción de residuos electrónicos.</p>
+          <div class="rating">
+            <p>Aplicación favorita de la familia ★★★★★ </p>
           </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Nuestros productos</h3>
+            <ul>
+              <li><a href="/pages/page-catalogo.html">Tecnológicos</a></li>
+              <li><a href="/pages/page-catalogo.html">Descuentos</a></li>
+              <li><a href="/index.html#title-head">Destacados</a></li>
+              <li><a href="/index.html">Nuestros aliados</a></li>
+              <li><a href="/pages/page-catalogo.html">Ver todo el catálogo</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Comunidad sostenible</h3>
+            <ul>
+              <li><a href="/pages/page-blog.html">Comunidad</a></li>
+              <li><a href="/pages/page-productos.html">Compra y Venta</a></li>
+              <li><a href="/pages/page-productos.html">Responsabilidad sostenible</a></li>
+              <li><a href="/pages/page-contacto.html">Contáctanos</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <div class="footer-bottom">
+        <p>© 2024 E-TechSustain. Todos los derechos reservados. | Condiciones y restricciones | Política de privacidad |
+          Menciones legales</p>
+        <div class="espa"></div>
+        <div class="payment-options">
+          <img src="/assets/e-tech-pagos.png" alt="Visa">
+        </div>
+        <div class="nosal"></div>
+      </div>
+    </footer>
 
-      <div class="form-section">
-          <label for="price">Ponle un precio sostenible</label>
-          <input type="text" id="price" name="price" placeholder="$0.00">
+    <section id="id-container-cart" class="container-cart">
+      <div class="items-contain">
+        <h1>Carrito</h1>
+        <i id="close-btn" class="fa fa-close"></i>
       </div>
+      <div id="cart-section">
+        <!-- Aquí se renderizarán los productos del carrito -->
+      </div>
+      <div class="subtotal">
+        <h3>Total</h3>
+        <h3 id="total-cart"></h3>
+      </div>
+      <div class="company-info">
+        <img src="/assets/equipo-icon-e-tech-sustain.svg" alt="Logo" />
+        <h4>E-Tech-Sustain</h4>
+        <span>2024 &copy;</span>
+      </div>
+    </section>
 
-      <div class="form-section">
-          <input type="submit" value="Subir Producto">
-      </div>
-  </form>
-</div>
-</div>
-</div>
-<!-- Termina formulario  -->
-<footer class="footer">
-  <div class="footer-content">
-    <div class="logo-description">
-      <img src="/assets/e-tech-logo.png" alt="E-Tech Sustain Logo" class="footer-logo">
-      <p>E-TechSustain es un e-commerce centrado en tecnología y gaming, con una comunidad que promueve la
-        sostenibilidad ambiental. Facilita la compra, venta, subasta y recomendación de productos, contribuyendo a la
-        reducción de residuos electrónicos.</p>
-      <div class="rating">
-        <p>Aplicación favorita de la familia ★★★★★ </p>
-      </div>
-    </div>
-    <div class="footer-links">
-      <div class="footer-column">
-        <h3>Nuestros productos</h3>
-        <ul>
-          <li><a href=>Tecnológicos</a></li>
-          <li><a href=>Descuentos</a></li>
-          <li><a href=>Destacados</a></li>
-          <li><a href=>Nuestros aliados</a></li>
-          <li><a href=>Ver todo el catálogo</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Comunidad sostenible</h3>
-        <ul>
-          <li><a href=>Blog</a></li>
-          <li><a href=>Compra y Venta</a></li>
-          <li><a href=>Responsabilidad sostenible</a></li>
-          <li><a href=>Contáctanos</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2024 E-TechSustain. Todos los derechos reservados. | Condiciones y restricciones | Política de privacidad |
-      Menciones legales</p>
-      <div class="espa"></div>
-    <div class="payment-options">
-      <img src="/assets/e-tech-pagos.png" alt="Visa">
-    </div>
-    <div class="nosal"></div>
-  </div>
-</footer>
-
-<section id="id-container-cart" class="container-cart">
-  <div class="items-contain">
-    <h1>Carrito</h1>
-    <i id="close-btn" class="fa fa-close"></i>
-  </div>
-  <div id="cart-section">
-    <!-- Aquí se renderizarán los productos del carrito -->
-  </div>
-  <div class="subtotal">
-    <h3>Total</h3>
-    <h3 id="total-cart"></h3>
-  </div>
-  <div class="company-info">
-    <img src="/assets/equipo-icon-e-tech-sustain.svg" alt="Logo" />
-    <h4>E-Tech-Sustain</h4>
-    <span>2024 &copy;</span>
-  </div>
-</section>
-
-  <script src="/js/script.js"></script>
-  <script src="/js/formSell.js"></script>
-  <script src="/js/cart.js"></script>
-  <script src="/js/session.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/formSell.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/session.js"></script>
 </body>
 
 </html>
