@@ -1,7 +1,7 @@
 const formulario = document.getElementById('contact-form');
 const inputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
 
-console.log(inputs);
+//console.log(inputs);
 
 const expresiones = {
   name: /^[a-zA-ZÀ-ÿ\s]+(?:\s[a-zA-ZÀ-ÿ\s]+)*(?:\s\d{1,2})?$/,

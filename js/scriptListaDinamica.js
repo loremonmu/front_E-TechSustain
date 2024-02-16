@@ -3,266 +3,266 @@ let products = {
     {
       productName: "Smart Watch SIM A1",
       category: "tecnología",
-      price: "46,900" + " COLOR: NEGRO",
+      price: "46900",
       image: "/assets/assets lista dinamica/Smart-Watch-SIM.jpg",
-           
+
     },
     {
       productName: "Mini Teclado Inalámbrico",
       category: "tecnología",
-      price: "19,200" + " COLOR: NEGRO, VERDE",
+      price: "19200",
       image: "/assets/assets lista dinamica/mini-teclado.jpg",
-           
+
     },
     {
       productName: "Consola Super Nintendo ",
       category: "tecnología",
-      price: "100,000" + " RETRO HDMI SF900",
+      price: "100000",
       image: "/assets/assets lista dinamica/consola-videojuegos.jpg",
-           
+
     },
     {
       productName: "Controlador Electrónico",
       category: "tecnología",
-      price: "15,600" + " PARA JUEGOS X8",
+      price: "15600",
       image: "/assets/assets lista dinamica/controlador-electrico.jpg",
-           
+
     },
     {
       productName: "DRONE 4K HD",
       category: "tecnología",
-      price: "90,900" + " CUATRO EJES",
+      price: "90900",
       image: "/assets/assets lista dinamica/dron.jpg",
-           
+
     },
     {
       productName: "LUCES LED ",
       category: "tecnología",
-      price: "46,900" + " KIT DE LUZ FLEXIBLE",
+      price: "46900",
       image: "/assets/assets lista dinamica/luces-led.jpg",
-           
+
     },
     {
       productName: "Depiladora Electrica",
       category: "mujeres",
-      price: "70,000" + " APRUEBA DE AGUA",
+      price: "70000",
       image: "/assets/assets lista dinamica/Depiladora.jpg",
     },
     {
       productName: "Mini Plancha De Pelo",
       category: "mujeres",
-      price: "90,000" + " COLOR: PINK, BLACK",
+      price: "90000",
       image: "/assets/assets lista dinamica/Mini-Plancha.jpg",
     },
     {
       productName: "Combo Onikuma (Teclado, Mouse, Diadema)",
       category: "mujeres",
-      price: "130" + " COLOR: PINK, WHITE",
+      price: "130000",
       image: "/assets/assets lista dinamica/como-onikuma.jpg",
     },
     {
       productName: "Termo Inteligente Digital",
       category: "mujeres",
-      price: "50,000" + " COLOR: PINK, BLACK",
+      price: "50000",
       image: "/assets/assets lista dinamica/termodigital.jpg",
     },
     {
       productName: "lIGE SMARTH WATCH WOMAN",
       category: "mujeres",
-      price: "85,000" + " COLOR: PINK, BLACK, WHITE",
+      price: "85000",
       image: "/assets/assets lista dinamica/relooj.jpg",
     },
     {
       productName: "Lámpara Para Uñas",
       category: "mujeres",
-      price: "60,000" + " Temporizador Secador De Portátil USB",
+      price: "60000",
       image: "/assets/assets lista dinamica/lamaparauñas.jpg",
     },
     {
       productName: "Consola De Mano 8GB",
       category: "hombres",
-      price: "330,000 " + "PANTALLA HD DE 4.3 PULGADAS ",
+      price: "330000 ",
       image: "/assets/assets lista dinamica/consola-mano.jpg",
     },
-    
+
     {
       productName: "Afeitadora Eléctrica ",
       category: "hombres",
-      price: "56,000 " + "3 EN 1 COLOR: BLACK, WHITE, GREY ",
+      price: "56000 ",
       image: "/assets/assets lista dinamica/Afeitadora.jpg",
     },
     {
       productName: " Gaming Mouse ",
       category: "hombres",
-      price: "70,000 " + " LED Backlight Ergonomics",
+      price: "70000 ",
       image: "/assets/assets lista dinamica/gaming-Mouse.jpg",
     },
     {
       productName: "Auriculares Inalámbricos Business ",
       category: "hombres",
-      price: "40,000 " + "COLOR: NEGRO, ROJO",
+      price: "40000 ",
       image: "/assets/assets lista dinamica/audifonos-man.jpg",
     },
     {
       productName: "Go pro 4k 1080p HD",
       category: "hombres",
-      price: "106,000 " + " Todo En Uno Impermeable",
+      price: "106000 ",
       image: "/assets/assets lista dinamica/gp-pro.jpg",
     },
     {
       productName: "SILLA GAMER",
       category: "hombres",
-      price: "230,000 ",
+      price: "230000 ",
       image: "/assets/assets lista dinamica/silla-gamer.jpg",
     },
     {
       productName: "Vaporizador Facial",
       category: "belleza",
-      price: "186,900"+ " COLOR: PINK, BLUE, BLACK",
+      price: "186900",
       image: "/assets/assets lista dinamica/vaporizador-facial.jpg",
     },
     {
       productName: "Cepillo Electronico",
       category: "belleza",
-      price: "86,900"+ " COLOR: PINK, BLUE, BLACK",
+      price: "86900",
       image: "/assets/assets lista dinamica/bcepillo.jpg",
     },
     {
       productName: "Depilacion Laser",
       category: "belleza",
-      price: "109,900" + " COLOR: NEGRO, BLANCO, ROSADO",
+      price: "109900",
       image: "/assets/assets lista dinamica/bdepilacion.jpg",
     },
     {
       productName: "Mascarilla Facial LED",
       category: "belleza",
-      price: "45,900" ,
+      price: "45900",
       image: "/assets/assets lista dinamica/bmascarilla.jpg",
     },
     {
       productName: "SECADORA DE PELO",
       category: "belleza",
-      price: "186,900"+ " COLOR: PINK, BLUE, BLACK",
+      price: "186900",
       image: "/assets/assets lista dinamica/bsecadora.jpg",
     },
     {
       productName: "Masajeador Muscular",
       category: "belleza",
-      price: "306,900"+ " COLOR: PINK, BLUE, BLACK",
+      price: "306900",
       image: "/assets/assets lista dinamica/masajeador.jpg",
     },
     {
       productName: "Balon Inteligente XIAOMI",
       category: "deporte",
-      price: "900,000"+" COLOR: WHITE, BLACK, BLUE",
+      price: "900000",
       image: "/assets/assets lista dinamica/balon.jpg",
     },
     {
       productName: "Auriculares Inalámbricos",
       category: "deporte",
-      price: "89,000"+" COLOR: PINK, WHITE, BLACK, BLUE",
+      price: "89000",
       image: "/assets/assets lista dinamica/auriculares-bluetooth.jpg",
     },
     {
       productName: "Gafas Deportivas VR",
       category: "deporte",
-      price: "209,000",
+      price: "209000",
       image: "/assets/assets lista dinamica/gafas3d.jpg",
     },
     {
       productName: "Zapatillas Inteligentes Adidas",
       category: "deporte",
-      price: "500,000",
+      price: "500000",
       image: "/assets/assets lista dinamica/zapatillas.jpg",
     },
     {
       productName: "Masajeador  Muscular",
       category: "salud",
-      price: "300,000" + " COLOR: BLACK, GREEN",
+      price: "300000",
       image: "/assets/assets lista dinamica/masajeador.jpg",
     },
     {
       productName: "Sensor De Higrómetro Digital",
       category: "salud",
-      price: "300,000" ,
+      price: "300000",
       image: "/assets/assets lista dinamica/termometro.jpg",
     },
     {
       productName: "Monitor De Presión Arterial",
       category: "salud",
-      price: "74,000" ,
+      price: "74000",
       image: "/assets/assets lista dinamica/monitor.jpg",
     },
     {
       productName: "Masajeador De Pies Eléctrico",
       category: "salud",
-      price: "39,000" ,
+      price: "39000",
       image: "/assets/assets lista dinamica/masajeadorpies.jpg",
     },
     {
       productName: "Termómetro Infrarrojo ",
       category: "salud",
-      price: "300,000" + " Medidor De Saturación De Dedos",
+      price: "300000",
       image: "/assets/assets lista dinamica/termometrodigital.jpg",
     },
-    
+
     {
       productName: "Proyector De Estrellas",
       category: "hogar",
-      price: "189,000"+ " DIFUSOR DE OLORES",
+      price: "189000",
       image: "/assets/assets lista dinamica/proyector-estrellas.jpg",
     },
     {
       productName: "Freidora De Aire",
       category: "hogar",
-      price: "189,000",
+      price: "189000",
       image: "/assets/assets lista dinamica/airflayer.jpg",
     },
     {
       productName: "Alexa Google Home",
       category: "hogar",
-      price: "100,000",
+      price: "100000",
       image: "/assets/assets lista dinamica/alexa.jpg",
     },
     {
       productName: "Difusor De Llama THREEFLAMES",
       category: "hogar",
-      price: "189,000"+ " Led USB",
+      price: "189000",
       image: "/assets/assets lista dinamica/difusor.jpg",
     },
     {
       productName: "Cortina Cadena De Luces",
       category: "hogar",
-      price: "48,000"+ " DIFUSOR DE OLORES",
+      price: "48000",
       image: "/assets/assets lista dinamica/ledhadas.jpg",
     },
     {
       productName: "Rosa Eterna 24K",
       category: "hogar",
-      price: "33,000",
+      price: "33000",
       image: "/assets/assets lista dinamica/rosaeterna.jpg",
     },
     {
       productName: "Mini Cámara Inalámbrica",
       category: "descuentos",
-      price: "163,000"+ "  ANTES: $200,000",
+      price: "163000",
       image: "/assets/assets lista dinamica/mini-camara.jpg",
     },
     {
       productName: "Fujifilm Instax Mini ",
       category: "descuentos",
-      price: "656,000"+ " ANTES: $800,000",
+      price: "656000",
       image: "/assets/assets lista dinamica/camarita.jpg",
     },
     {
       productName: "Gafas De Sol Compatibles Con Bluetooth ",
       category: "descuentos",
-      price: "30,000"+ " ANTES: $70,000",
+      price: "30000",
       image: "/assets/assets lista dinamica/gafassol.jpg",
     },
-    
-    
-    
+
+
+
 
   ],
 };
@@ -296,15 +296,18 @@ for (let i of products.data) {
 
   // Precio
   let price = document.createElement("h6");
-  price.innerText = "$" + i.price;
+  const precioFormateado = new Intl.NumberFormat('es-ES').format(i.price);
+  price.innerText = `$${precioFormateado}`;
+
   container.appendChild(price);
 
   // Botón "Añadir al carrito" con icono de carrito
   let addButton = document.createElement("button");
+  addButton.classList.add("add-to-cart-button");
   addButton.innerHTML = '<i class="fas fa-shopping-cart"></i> Añadir al carrito';
   addButton.addEventListener("click", function() {
     // Función para manejar el evento de clic del botón
-    addToCart(i.productId); // Aquí deberías pasar el ID del producto
+    addToCart(i); // Aquí deberías pasar el ID del producto
   });
   container.appendChild(addButton);
 
@@ -312,11 +315,44 @@ for (let i of products.data) {
   document.getElementById("products").appendChild(card);
 }
 
-// Función para añadir productos al carrito
-function addToCart(productId) {
-  // Aquí puedes escribir la lógica para añadir el producto al carrito
-  // Por ejemplo, puedes tener una lista de productos en el carrito y añadir el producto correspondiente a esa lista.
-  console.log("Producto añadido al carrito:", productId);
+function addToCart(product) {
+  const cart = getCart();
+  const existingItemIndex = cart.findIndex(item => item.productName === product.productName);
+
+  if (existingItemIndex !== -1) {
+    // Si el producto ya está en el carrito, aumenta la cantidad en 1
+    cart[existingItemIndex].quantity += 1;
+
+    Swal.fire({
+      position: "top-end",
+      icon: "info",
+      title: "Se agregó una unidad al carrito",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  } else {
+    // Si el producto no está en el carrito, agrégalo con cantidad 1
+    const newItem = {
+      image: product.image,
+      productName: product.productName,
+      category: product.category,
+      price: product.price,
+      quantity: 1,
+    };
+    cart.push(newItem);
+
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "El producto se añadió correctamente al carrito",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+
+  // Actualiza el carrito en el almacenamiento local y renderiza el carrito
+  updateCart(cart);
+  renderCart();
 }
 
 //parameter passed from button (Parameter same as category)
@@ -377,110 +413,108 @@ window.onload = () => {
   filterProduct("todo");
 };
 
-// Function to render products
 function renderizarProductos() {
   baseDeDatos.forEach((info) => {
-    // Create the product card structure
+    // Crear la estructura de la tarjeta del producto
     const miNodo = document.createElement("div");
     miNodo.classList.add("card", "col-sm-4");
 
-    // Create the card body
+    // Crear el cuerpo de la tarjeta
     const miNodoCardBody = document.createElement("div");
     miNodoCardBody.classList.add("card-body");
 
-    // Create the product title
+    // Crear el título del producto
     const miNodoTitle = document.createElement("h5");
     miNodoTitle.classList.add("card-title");
     miNodoTitle.textContent = info.nombre;
 
-    // Create the product image
+    // Crear la imagen del producto
     const miNodoImagen = document.createElement("img");
     miNodoImagen.classList.add("img-fluid");
     miNodoImagen.setAttribute("src", info.imagen);
 
-    // Create the product price
+    // Crear el precio del producto
     const miNodoPrecio = document.createElement("p");
     miNodoPrecio.classList.add("card-text");
     miNodoPrecio.textContent = `${info.precio}${divisa}`;
 
-    // Create the "Add to cart" button with an icon
+    // Crear el botón "Añadir al carrito" con un ícono
     const miNodoBoton = document.createElement("button");
     miNodoBoton.classList.add("btn", "btn-primary");
-    miNodoBoton.textContent = "Add to cart";
+    miNodoBoton.textContent = "Añadir al carrito";
 
     const miNodoIcono = document.createElement("i");
     miNodoIcono.classList.add("fas", "fa-cart-plus");
     miNodoBoton.appendChild(miNodoIcono);
 
-    // Add the click event listener to the button
+    // Agregar el evento click al botón
     miNodoBoton.addEventListener("click", () => {
       anyadirProductoAlCarrito(info.id);
     });
 
-    // Append elements to the card body
+    // Agregar elementos al cuerpo de la tarjeta
     miNodoCardBody.appendChild(miNodoImagen);
     miNodoCardBody.appendChild(miNodoTitle);
     miNodoCardBody.appendChild(miNodoPrecio);
     miNodoCardBody.appendChild(miNodoBoton);
 
-    // Append the card body to the product node
+    // Agregar el cuerpo de la tarjeta al nodo del producto
     miNodo.appendChild(miNodoCardBody);
 
-    // Append the product node to the DOM
+    // Agregar el nodo del producto al DOM
     DOMitems.appendChild(miNodo);
   });
 }
 
-// ...
+// Función para mostrar productos en una página específica
+// function renderProducts(page) {
+//   const startIndex = (page - 1) * productsPerPage; 
+//   const endIndex = startIndex + productsPerPage;
+//   const currentProducts = products.data.slice(startIndex, endIndex);
+//   console.log(currentProducts);
+//   document.getElementById("products").innerHTML = "";
 
-for (let i of products.data) {
-  // Create Card
-  let card = document.createElement("div");
-  // Card should have category and should stay hidden initially
-  card.classList.add("card", i.category, "hide");
+//   currentProducts.forEach((i) => {
+//     let card = document.createElement("div");
+//     card.classList.add("card", i.category, "hide");
+//     let imgContainer = document.createElement("div");
+//     imgContainer.classList.add("image-container");
 
-  // image div
-  let imgContainer = document.createElement("div");
-  imgContainer.classList.add("image-container");
+//     let image = document.createElement("img");
+//     image.setAttribute("src", i.image);
+//     image.classList.add("imageLista");
+//     imgContainer.appendChild(image);
+//     card.appendChild(imgContainer);
 
-  // img tag
-  let image = document.createElement("img");
-  image.setAttribute("src", i.image);
-  image.classList.add("imageLista");
-  imgContainer.appendChild(image);
-  card.appendChild(imgContainer);
+//     let container = document.createElement("div");
+//     container.classList.add("container");
 
-  // container
-  let container = document.createElement("div");
-  container.classList.add("container");
+//     let name = document.createElement("h5");
+//     name.classList.add("product-name");
+//     name.innerText = i.productName.toUpperCase();
+//     container.appendChild(name);
 
-  // product name
-  let name = document.createElement("h5");
-  name.classList.add("product-name");
-  name.innerText = i.productName.toUpperCase();
-  container.appendChild(name);
+//     let price = document.createElement("h6");
+//     const precioFormateado = new Intl.NumberFormat('es-ES').format(i.price);
+//     price.innerText = `$${precioFormateado}`;
 
-  // price
-  let price = document.createElement("h6");
-  price.innerText = "$" + i.price;
-  container.appendChild(price);
+//     container.appendChild(price);
 
-  // Add "Add to cart" button
-  let addToCartButton = document.createElement("button");
-  addToCartButton.innerText = "Agregar al carrito";
-  addToCartButton.classList.add("add-to-cart-button");
+//     let addButton = document.createElement("button");
+//     addButton.classList.add("add-to-cart-button");
+//     addButton.innerHTML = '<i class="fas fa-shopping-cart"></i> Añadir al carrito';
+//     addButton.addEventListener("click", function () {
+//       addToCart(i);
+//     });
+//     container.appendChild(addButton);
 
-  // Add click event listener to the "Add to cart" button
-  addToCartButton.addEventListener("click", () => {
-    // You can customize this function to add the product to the cart
-    // For now, let's just log a message to the console
-    console.log("Producto agregado al carrito:", i.productName);
-  });
+//     card.appendChild(container);
+//     document.getElementById("products").appendChild(card);
+//     
+//   });
+// }
 
-  container.appendChild(addToCartButton);
-
-  card.appendChild(container);
-  document.getElementById("products").appendChild(card);
-}
-
-// ...
+// Llamar a la función para renderizar los productos en la página inicial
+renderProducts(currentPage);
+// Llamar a la función para actualizar la paginación
+updatePagination();

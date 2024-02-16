@@ -97,7 +97,21 @@ h3.ayud  {
   align-items: center;
   width: 32%;
   }
-  
+
+  .container-grid-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    place-items: center;
+    padding: 3rem 0;
+  }
+  .div-item-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
   .sell-button {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
@@ -194,4 +208,27 @@ h3.ayud  {
   }
   /* Fin formulario compras*/
 
-  
+  @media screen and (max-width: 1024px){
+    .container-grid-items{
+      grid-template-columns: 1fr 1fr;
+    }
+    .center {
+      grid-column: span 2; /* Este elemento ocupará las dos columnas disponibles */
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .form-container {
+      padding: 53px 0;
+      width: auto;
+    }
+    .sell-button {
+      width: auto;
+    }
+    .container-grid-items{
+      grid-template-columns: 1fr;
+    }
+    .center {
+      grid-column: span 1; /* Este elemento ocupará las dos columnas disponibles */
+    }
+  }
