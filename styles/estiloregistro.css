@@ -1,25 +1,31 @@
-
-
 body {
-    background: url("/assets/img/post-registro2.jpg"); 
+    background: url("/assets/img/fondo\ 1.svg");
     background-size: cover;
-    height: 110vh;
-    color: #ffffff;
     margin: 0;
 }
 
+.account-already {
+    color: #131b36;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.account-already:hover {
+    color: #03ba85;
+    text-decoration: none;
+}
 
 .container {
-   
-    padding: 30px; 
-    background-color: #011536;
-    border:05px solid #ffffff;
-    max-width: 500px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 0.3px solid #000000;
+    max-width: 1100px;
     margin: auto;
     text-align: left;
-    border-radius: 40px;
-      
-   
+    border-radius: 10px;
 }
 
 h2 {
@@ -36,11 +42,11 @@ h2 {
     background-color: #131b36;
     border-color: #ffffff;
 }
+
 @media only screen and (max-width: 900px) {
     body {
         background-size: cover;
         height: 90vh;
-
     }
 
 }

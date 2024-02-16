@@ -1,0 +1,262 @@
+[
+  {
+    "productName": "Smart Watch SIM A1",
+    "category": "tecnología",
+    "price": "46900",
+    "image": "/assets/assets lista dinamica/Smart-Watch-SIM.jpg"
+
+  },
+  {
+    "productName": "Mini Teclado Inalámbrico",
+    "category": "tecnología",
+    "price": "19200",
+    "image": "/assets/assets lista dinamica/mini-teclado.jpg"
+
+  },
+  {
+    "productName": "Consola Super Nintendo ",
+    "category": "tecnología",
+    "price": "100000",
+    "image": "/assets/assets lista dinamica/consola-videojuegos.jpg"
+
+  },
+  {
+    "productName": "Controlador Electrónico",
+    "category": "tecnología",
+    "price": "15600",
+    "image": "/assets/assets lista dinamica/controlador-electrico.jpg"
+
+  },
+  {
+    "productName": "DRONE 4K HD",
+    "category": "tecnología",
+    "price": "90900",
+    "image": "/assets/assets lista dinamica/dron.jpg"
+
+  },
+  {
+    "productName": "LUCES LED ",
+    "category": "tecnología",
+    "price": "46900",
+    "image": "/assets/assets lista dinamica/luces-led.jpg"
+
+  },
+  {
+    "productName": "Depiladora Electrica",
+    "category": "mujeres",
+    "price": "70000",
+    "image": "/assets/assets lista dinamica/Depiladora.jpg"
+  },
+  {
+    "productName": "Mini Plancha De Pelo",
+    "category": "mujeres",
+    "price": "90000",
+    "image": "/assets/assets lista dinamica/Mini-Plancha.jpg"
+  },
+  {
+    "productName": "Combo Onikuma (Teclado, Mouse, Diadema)",
+    "category": "mujeres",
+    "price": "130000",
+    "image": "/assets/assets lista dinamica/como-onikuma.jpg"
+  },
+  {
+    "productName": "Termo Inteligente Digital",
+    "category": "mujeres",
+    "price": "50000",
+    "image": "/assets/assets lista dinamica/termodigital.jpg"
+  },
+  {
+    "productName": "lIGE SMARTH WATCH WOMAN",
+    "category": "mujeres",
+    "price": "85000",
+    "image": "/assets/assets lista dinamica/relooj.jpg"
+  },
+  {
+    "productName": "Lámpara Para Uñas",
+    "category": "mujeres",
+    "price": "60000",
+    "image": "/assets/assets lista dinamica/lamaparauñas.jpg"
+  },
+  {
+    "productName": "Consola De Mano 8GB",
+    "category": "hombres",
+    "price": "330000 ",
+    "image": "/assets/assets lista dinamica/consola-mano.jpg"
+  },
+
+  {
+    "productName": "Afeitadora Eléctrica ",
+    "category": "hombres",
+    "price": "56000 ",
+    "image": "/assets/assets lista dinamica/Afeitadora.jpg"
+  },
+  {
+    "productName": " Gaming Mouse ",
+    "category": "hombres",
+    "price": "70000 ",
+    "image": "/assets/assets lista dinamica/gaming-Mouse.jpg"
+  },
+  {
+    "productName": "Auriculares Inalámbricos Business ",
+    "category": "hombres",
+    "price": "40000 ",
+    "image": "/assets/assets lista dinamica/audifonos-man.jpg"
+  },
+  {
+    "productName": "Go pro 4k 1080p HD",
+    "category": "hombres",
+    "price": "106000 ",
+    "image": "/assets/assets lista dinamica/gp-pro.jpg"
+  },
+  {
+    "productName": "SILLA GAMER",
+    "category": "hombres",
+    "price": "230000 ",
+    "image": "/assets/assets lista dinamica/silla-gamer.jpg"
+  },
+  {
+    "productName": "Vaporizador Facial",
+    "category": "belleza",
+    "price": "186900",
+    "image": "/assets/assets lista dinamica/vaporizador-facial.jpg"
+  },
+  {
+    "productName": "Cepillo Electronico",
+    "category": "belleza",
+    "price": "86900",
+    "image": "/assets/assets lista dinamica/bcepillo.jpg"
+  },
+  {
+    "productName": "Depilacion Laser",
+    "category": "belleza",
+    "price": "109900",
+    "image": "/assets/assets lista dinamica/bdepilacion.jpg"
+  },
+  {
+    "productName": "Mascarilla Facial LED",
+    "category": "belleza",
+    "price": "45900",
+    "image": "/assets/assets lista dinamica/bmascarilla.jpg"
+  },
+  {
+    "productName": "SECADORA DE PELO",
+    "category": "belleza",
+    "price": "186900",
+    "image": "/assets/assets lista dinamica/bsecadora.jpg"
+  },
+  {
+    "productName": "Masajeador Muscular",
+    "category": "belleza",
+    "price": "306900",
+    "image": "/assets/assets lista dinamica/masajeador.jpg"
+  },
+  {
+    "productName": "Balon Inteligente XIAOMI",
+    "category": "deporte",
+    "price": "900000",
+    "image": "/assets/assets lista dinamica/balon.jpg"
+  },
+  {
+    "productName": "Auriculares Inalámbricos",
+    "category": "deporte",
+    "price": "89000",
+    "image": "/assets/assets lista dinamica/auriculares-bluetooth.jpg"
+  },
+  {
+    "productName": "Gafas Deportivas VR",
+    "category": "deporte",
+    "price": "209000",
+    "image": "/assets/assets lista dinamica/gafas3d.jpg"
+  },
+  {
+    "productName": "Zapatillas Inteligentes Adidas",
+    "category": "deporte",
+    "price": "500000",
+    "image": "/assets/assets lista dinamica/zapatillas.jpg"
+  },
+  {
+    "productName": "Masajeador  Muscular",
+    "category": "salud",
+    "price": "300000",
+    "image": "/assets/assets lista dinamica/masajeador.jpg"
+  },
+  {
+    "productName": "Sensor De Higrómetro Digital",
+    "category": "salud",
+    "price": "300000",
+    "image": "/assets/assets lista dinamica/termometro.jpg"
+  },
+  {
+    "productName": "Monitor De Presión Arterial",
+    "category": "salud",
+    "price": "74000",
+    "image": "/assets/assets lista dinamica/monitor.jpg"
+  },
+  {
+    "productName": "Masajeador De Pies Eléctrico",
+    "category": "salud",
+    "price": "39000",
+    "image": "/assets/assets lista dinamica/masajeadorpies.jpg"
+  },
+  {
+    "productName": "Termómetro Infrarrojo ",
+    "category": "salud",
+    "price": "300000",
+    "image": "/assets/assets lista dinamica/termometrodigital.jpg"
+  },
+
+  {
+    "productName": "Proyector De Estrellas",
+    "category": "hogar",
+    "price": "189000",
+    "image": "/assets/assets lista dinamica/proyector-estrellas.jpg"
+  },
+  {
+    "productName": "Freidora De Aire",
+    "category": "hogar",
+    "price": "189000",
+    "image": "/assets/assets lista dinamica/airflayer.jpg"
+  },
+  {
+    "productName": "Alexa Google Home",
+    "category": "hogar",
+    "price": "100000",
+    "image": "/assets/assets lista dinamica/alexa.jpg"
+  },
+  {
+    "productName": "Difusor De Llama THREEFLAMES",
+    "category": "hogar",
+    "price": "189000",
+    "image": "/assets/assets lista dinamica/difusor.jpg"
+  },
+  {
+    "productName": "Cortina Cadena De Luces",
+    "category": "hogar",
+    "price": "48000",
+    "image": "/assets/assets lista dinamica/ledhadas.jpg"
+  },
+  {
+    "productName": "Rosa Eterna 24K",
+    "category": "hogar",
+    "price": "33000",
+    "image": "/assets/assets lista dinamica/rosaeterna.jpg"
+  },
+  {
+    "productName": "Mini Cámara Inalámbrica",
+    "category": "descuentos",
+    "price": "163000",
+    "image": "/assets/assets lista dinamica/mini-camara.jpg"
+  },
+  {
+    "productName": "Fujifilm Instax Mini ",
+    "category": "descuentos",
+    "price": "656000",
+    "image": "/assets/assets lista dinamica/camarita.jpg"
+  },
+  {
+    "productName": "Gafas De Sol Compatibles Con Bluetooth ",
+    "category": "descuentos",
+    "price": "30000",
+    "image": "/assets/assets lista dinamica/gafassol.jpg"
+  }
+]

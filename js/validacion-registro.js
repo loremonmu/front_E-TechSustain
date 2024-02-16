@@ -21,10 +21,22 @@ function validateForm() {
         phoneNumber,
         email,
         password,
+        isLoggedIn: false,
+        role: 0
     };
 
+    let arrayUsers = [];
+    arrayUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    if (arrayUsers.some(user => user.email === email)) {
+        showAlert('El correo electrónico ya está registrado', 'danger');
+        return;
+    }else{
+        arrayUsers.push(userObject);
+        localStorage.setItem('users', JSON.stringify(arrayUsers));
+    }
+
     showAlert('Registro exitoso', 'success');
-    console.log(userObject);
 }
 
 function isPasswordMatch(password, confirmPassword) {
