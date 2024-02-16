@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap");
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
 
 html,
 body {
   position: relative;
-  width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  scrollbar-color: #03ba85 #fff;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
-
 /* Inicio navbar */
 .nav-wrapper {
   display: flex;
@@ -21,6 +26,10 @@ body {
   border-bottom: 10px solid;
   border-image: linear-gradient(to right, #03ba85, #064466);
   border-image-slice: 1;
+  /* position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99; */
 }
 .nav-wrapper .brand-logo {
   width: 100px;
@@ -28,12 +37,53 @@ body {
 .brand-logo img {
   max-width: 8rem;
 }
+.menu-mobile{
+  width: 100%;
+}
 .list-menu,
 .menu-mobile {
   display: flex;
-  width: 100%;
   align-items: center;
   list-style: none;
+}
+.list-menu {
+  width: 70%;
+  justify-content: space-around;
+}
+.list-menu li a.activo {
+  position: relative;
+}
+.list-menu li a.activo::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #03ba85, #064466);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+.container-btns {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+.btn-log{
+  background-color: #03ba85;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-log:hover {
+  background-color: #064466;
 }
 .list-menu {
   justify-content: center;
@@ -76,12 +126,6 @@ body {
   display: none;
 }
 
-a.activo:active {
-  color: #03BA85;
-}
-
-
-
 .about-section {
   max-width: 600px;
   margin: 50px auto;
@@ -110,11 +154,10 @@ h1.nos{
     cursor: pointer;
   }
   .menu-mobile {
-    /* translate the menu out of page and in action btn appers */
-    transform: translateY(-100%);
+    transform: translateY(-120%);
     position: fixed;
     width: 100%;
-    height: 50vh;
+    height: 65vh;
     top: 0;
     left: 0;
     bottom: 0;
@@ -131,7 +174,7 @@ h1.nos{
     padding: 0;
   }
   .menu-mobile .list-menu,
-  .btn-menu {
+  .btn-menu, .container-btns {
     flex-direction: column;
     gap: 1rem;
   }
@@ -153,6 +196,10 @@ h1.nos{
   .btn-text {
     display: flex;
     align-items: center;
+  }
+  .container-btns {
+    padding: 1rem 0 0 0;
+    width: 100%;
   }
 }
 
@@ -314,11 +361,14 @@ h1.nos{
 
 .div-item {
   flex: 1;
+  height: 450px;
   max-width: 300px;
-  /*border: 1px solid #ddd;*/
   padding: 20px;
   text-align: center;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 img.formatofoto {
@@ -347,12 +397,15 @@ h1#title-head {
   display: flex;
   justify-content: center;
   align-items: center;
-   height: 70vh; 
   /*background-color: #011536;*/
   /*background: linear-gradient(to right, #03BA85, #064466);*/
   background: linear-gradient(to right, rgb(3 186 133 / 39%), rgb(6 68 102 / 15%));
 
   padding: 30px;
+}
+
+.swiper-wrapper{
+  max-height: 450px !important;
 }
 
 .card__container{
@@ -367,6 +420,7 @@ h1#title-head {
 
 .card__article{
   width: 300px;
+  height: 100% !important;
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -374,10 +428,15 @@ h1#title-head {
 .card__image{
   position: relative;
   background-color: white;
-  padding-top: 1.5rem;
-  margin-bottom: -.75rem;
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
 }
-
+.card__image img{
+  background-position: center;
+  
+  object-fit: cover;
+}
 .card__data {
   background-color: #021d2b;
   padding: 1.5rem 2rem;
@@ -507,7 +566,7 @@ h1#title-head {
   }
 }
 
-h2 {
+#nuestro-equipo {
   color: #011536;
   align-items: center;
   font-size: 2rem;

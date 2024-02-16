@@ -1,82 +1,83 @@
 body {
-    background: url("/assets/img/fondo\ 1.svg");
-    background-size: cover;
-    height: 110vh;
-    color: #ffffff;
-    margin: 0;
-    overflow: hidden;
-    position: relative;
-  }
+  background: url("/assets/img/fondo\ 1.svg");
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+}
 
 .container input,
 .container textarea,
 .container select {
-  border: 2px solid #000000; 
-  margin-bottom: 15px; 
+  border: 2px solid #000000;
+  margin-bottom: 15px;
 }
 
 .container input:focus,
 .container textarea:focus,
 .container select:focus {
-  border-color: #131b36; /
-}
-  
-  /* filtro de desenfoque */
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: inherit; 
-    filter: blur(8px); 
-    z-index: -1; 
-  }
-
-.container { 
-        padding: 100px;
-        background-color: #ffffff;
-        border: 0.3px solid #000000; 
-        max-width: 1100px; 
-        margin: auto;
-        text-align: left;
-        border-radius: 10px;
-    }
-
-.col-md-6{
-    position: left;
+  border-color: #131b36;
 }
 
-#logoLogin{
-    max-width: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+/* filtro de desenfoque */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
 }
 
-    
+.container {
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 0.3px solid #000000;
+  max-width: 1100px;
+  margin: auto;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.col-md-6 {
+  position: left;
+}
+
+#logoLogin {
+  max-width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
 h4 {
-    color: #064466;
-    text-align: center;
-    font-weight: 700;   
+  color: #064466;
+  text-align: center;
+  font-weight: 700;
 }
 
 .btn-primary {
-    display: block; 
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #037A85;
-    border-color: #ffffff;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #037A85;
+  border-color: #ffffff;
+}
 
 .btn-primary:hover {
-    background-color: #131b36;
-    border-color: #ffffff;
+  background-color: #131b36;
+  border-color: #ffffff;
 }
-@media only screen and (max-width: 900px) {
-    body {
-        background-size: cover;
-        height: 90vh;
 
-    }
+@media only screen and (max-width: 900px) {
+  body {
+    background-size: cover;
+    height: 90vh;
+
+  }
 
 }

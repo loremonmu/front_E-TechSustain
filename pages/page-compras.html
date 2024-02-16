@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Productos</title>
+  <title>Compras</title>
   <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="stylesheet" href="/styles/cart.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/styles/styleHistorialCompras.css"/>
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -17,19 +19,29 @@
     <a href="#" class="brand-logo"><img src="assets/logo-e-tech-sustain.png" alt="Logo" /></a>
     <div class="menu-mobile">
       <ul class="list-menu">
-        <li><a href="/index.html">Inicio</a></li>
-        <li><a href="/pages/page-catalogo.html">Catálogo</a></li>
-        <li><a href="/pages/page-productos.html">Mis Productos</a></li>
-        <li><a href="/pages/page-compras.html">Mis Compras</a></li>
-        <li><a href="/pages/page-descuentos.html">Blog</a></li>
-        <li><a href="/pages/page-contacto.html">Contacto</a></li>
+        <li><a href="/index.html" >Inicio</a></li>
+        <li><a href="/pages/page-catalogo.html" >Catálogo</a></li>
+        <li class="user-logged"><a href="/pages/page-productos.html" >Mis Productos</a></li>
+        <li class="user-logged"><a href="/pages/page-compras.html" >Mis Compras</a></li>
+        <li><a href="/pages/page-blog.html" >Blog</a></li>
+        <li><a href="/pages/page-contacto.html" >Contacto</a></li>
       </ul>
-      <div class="btn-menu">
+
+      <div class="container-btns logged-true">
+        <a href="/pages/page-login.html" class="btn-login">
+          <button class="btn-log">Iniciar Sesión</button>
+        </a>
+        <a href="/pages/page-registro.html" class="btn-register">
+          <button class="btn-log">Registrarse</button>
+        </a>
+      </div>
+
+      <div class="user-logged btn-menu">
         <a class="icon" href="/pages/page-perfil.html">
           <i class="fas fa-user"></i>
           <span class="btn-text">Perfil</span>
         </a>
-        <div class="icon">
+        <div id="open-cart" class="icon">
           <i class="fas fa-shopping-cart"></i>
           <span class="btn-text">Carrito</span>
         </div>
@@ -97,7 +109,28 @@
     </div>
   </footer>
 
+  <section id="id-container-cart" class="container-cart">
+    <div class="items-contain">
+      <h1>Carrito</h1>
+      <i id="close-btn" class="fa fa-close"></i>
+    </div>
+    <div id="cart-section">
+      <!-- Aquí se renderizarán los productos del carrito -->
+    </div>
+    <div class="subtotal">
+      <h3>Total</h3>
+      <h3 id="total-cart"></h3>
+    </div>
+    <div class="company-info">
+      <img src="/assets/equipo-icon-e-tech-sustain.svg" alt="Logo" />
+      <h4>E-Tech-Sustain</h4>
+      <span>2024 &copy;</span>
+    </div>
+  </section>
+
   <script src="/js/script.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/session.js"></script>
 </body>
 
 </html>

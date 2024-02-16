@@ -1,15 +1,83 @@
 
 /* Código Navbar */
 let iconMobile = document.querySelector('.icon-mobile');
-    let menuMobile = document.querySelector('.menu-mobile');
-    let iconClose = document.querySelector('.icon-close');
+let menuMobile = document.querySelector('.menu-mobile');
+let iconClose = document.querySelector('.icon-close');
 
-    iconMobile.addEventListener('click', function(){
-      menuMobile.classList.toggle('active');
-    })
-    iconClose.addEventListener('click', function(){
-      menuMobile.classList.toggle('active');
-    })
+iconMobile.addEventListener('click', function () {
+  menuMobile.classList.toggle('active');
+})
+iconClose.addEventListener('click', function () {
+  menuMobile.classList.toggle('active');
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+  var currentUrl = window.location.pathname;
+  var menuLinks = document.querySelectorAll(".list-menu a");
+
+  menuLinks.forEach(function(link) {
+    if (link.getAttribute("href") === currentUrl) {
+      link.classList.add("activo");
+    }
+  });
+});
+
+//slider
+
+let products = [
+  {
+    productName: "Zapatillas Inteligentes Adidas",
+    category: "deporte",
+    price: "500000",
+    image: "/assets/assets lista dinamica/zapatillas.jpg",
+  },
+  {
+    productName: "Masajeador  Muscular",
+    category: "salud",
+    price: "300000",
+    image: "/assets/assets lista dinamica/masajeador.jpg",
+  },
+  {
+    productName: "Sensor De Higrómetro Digital",
+    category: "salud",
+    price: "300000",
+    image: "/assets/assets lista dinamica/termometro.jpg",
+  },
+  {
+    productName: "Monitor De Presión Arterial",
+    category: "salud",
+    price: "74000",
+    image: "/assets/assets lista dinamica/monitor.jpg",
+  },
+];
+
+let containerSlider = document.getElementById('slider-container');
+
+console.log(containerSlider);
+
+products.forEach((product) => {
+  let card = document.createElement('article');
+  card.className = 'card__article swiper-slide';
+  card.innerHTML = `
+    
+    <div class="card__image">
+      <img src="${product.image}" alt="image" class="card__img">
+      <div class="card__shadow"></div>
+    </div>
+
+    <div class="card__data">
+      <h3 class="card__name">${product.productName}</h3>
+      <p class="card__description">
+        ${product.price}
+      </p>
+      <button class="card__button add-to-cart-button">
+        <i class="fas fa-shopping-cart"></i>Añadir al carrito
+      </button>
+    </div>
+
+  `;
+  containerSlider.appendChild(card);
+});
 
 /* Código Equipo / destacados */
 
@@ -27,108 +95,3 @@ function moverProductos(direccion) {
   var translateValue = -currentIndex * (100 / totalProductos) + '%';
   productosContainer.style.transform = 'translateX(' + translateValue + ')';
 }
-
-// formulario vender inicio
-
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-//fin formlario
-
-//seccion de formulario productos
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('product-form');
-
-  cargarDatosFormulario();
-
-  // Evento para manejar el envío del formulario
-  form.addEventListener('submit', function(e) {
-      e.preventDefault(); 
-
-      // Verificar los datos del formulario
-      const errorMessage = verificarDatosFormulario();
-
-      if (errorMessage) {
-        alert(errorMessage);
-      } else {
-        // Recoger los datos del formulario
-        const datosFormulario = {
-            productName: document.getElementById('product-name').value,
-            subcategory: document.getElementById('subcategory').value,
-            price: document.getElementById('price').value,
-            // la información de la imagen no deja almacenar en localStorage
-        };
-
-        // Almacenar los datos en localStorage
-        localStorage.setItem('datosFormulario', JSON.stringify(datosFormulario));
-        form.reset ();
-      }
-  });
-});
-
-function cargarDatosFormulario() {
-  const datosGuardados = JSON.parse(localStorage.getItem('datosFormulario'));
-  if (datosGuardados) {
-      document.getElementById('product-name').value = datosGuardados.productName || '';
-      document.getElementById('subcategory').value = datosGuardados.subcategory || '';
-      document.getElementById('price').value = datosGuardados.price || '';
-  }
-}
-  // Datos de las alertas
-  function verificarDatosFormulario() {
-    const productName = document.getElementById('product-name').value.trim();
-    const price = document.getElementById('price').value;
-    const subcategory = document.getElementById('subcategory').value;
-  
-    if (productName === '') {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'El campo "Nombre del Producto" no puede estar vacío.'
-      });
-      return false;
-    }
-    if (price <= 0 || isNaN(price)) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'El campo "Precio sostenible" no es un valor correcto.'
-      });
-      return false;
-    }
-    if (subcategory === '') {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Advertencia',
-        text: 'Debes seleccionar una opción en el campo "Subcategoría".'
-      });
-      return false;
-    } 
-  
-    // Si todos los campos son válidos, muestra una alerta de éxito
-    Swal.fire({
-      icon: 'success',
-      title: '¡Enviado!',
-      text: 'El formulario se ha enviado con éxito.',
-      confirmButtonText: 'Ok'
-    }).then((result) => {
-      if (result.isConfirmed) {
-      }
-    });
-  }
