@@ -9,17 +9,17 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log(cartBtns);
   console.log(btnComprar);
 
-  btnComprar.addEventListener("click", function() {
-    sendCarrito();
-  });
-
+  
   cartBtns.forEach(function(cartBtn) {
     cartBtn.addEventListener("click", function() {
       showCart.classList.toggle("active");
       menuMobile.classList.remove('active');
     });
   });
-
+  
+  btnComprar.addEventListener("click", function() {
+    sendCarrito();
+  });
 });
 
 closeBtn.addEventListener("click", () => {
