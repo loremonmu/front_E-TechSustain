@@ -4,31 +4,31 @@ let products = [
   {
     productName: "Combo Teclado con Mouse CMK-188.",
     category: "deporte",
-    price: "50000",
+    price: "50.000",
     image: "/assets/e-tech-sustain-producto1.png",
   },
   {
     productName: "Zapatillas Inteligentes Adidas",
     category: "deporte",
-    price: "500000",
+    price: "50.0000",
     image: "/assets/assets lista dinamica/zapatillas.jpg",
   },
   {
     productName: "Masajeador  Muscular",
     category: "salud",
-    price: "300000",
+    price: "30.0000",
     image: "/assets/assets lista dinamica/masajeador.jpg",
   },
   {
     productName: "Sensor De Higrómetro Digital",
     category: "salud",
-    price: "300000",
+    price: "300.000",
     image: "/assets/assets lista dinamica/termometro.jpg",
   },
   {
     productName: "Monitor De Presión Arterial",
     category: "salud",
-    price: "74000",
+    price: "74.000",
     image: "/assets/assets lista dinamica/monitor.jpg",
   },
 ];
@@ -48,7 +48,7 @@ products.forEach((product) => {
     <div class="card__data">
       <h3 class="card__name">${product.productName}</h3>
       <p class="card__description">
-        ${product.price}
+        $ ${product.price} COP
       </p>
       <a href="/pages/page-catalogo.html" class="card__button">
         <button class="add-to-cart-button">
