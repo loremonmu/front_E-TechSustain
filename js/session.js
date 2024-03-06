@@ -62,3 +62,4 @@ function changeRole(){
   logOutUser.role = 1;
   localStorage.setItem('users', JSON.stringify(arrayUsers));
 }
+
