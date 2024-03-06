@@ -1,4 +1,6 @@
-function validateForm() {
+const urlLogin = "http://localhost:9090/usuarios/verify";
+
+function verifyUser() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
@@ -7,46 +9,78 @@ function validateForm() {
     return;
   }
 
-  const userObject = {
-    email,
-    password,
+  const userBody = {
+    correo: email,
+    contrasena: password,
   };
 
+  console.log(JSON.stringify(userBody));
+
+  fetch(urlLogin, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userBody),
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.text(); // Si la respuesta es exitosa, obtenemos el texto
+      } else {
+        throw new Error('Error en la solicitud');
+      }
+    })
+    .then((data) => {
+      if (data === "Usuario verificado") {
+        // Si la respuesta es "Usuario verificado", entonces el inicio de sesión es exitoso
+        const userObject = {
+          email: email,
+          isLoggedIn: true
+        };
+        verifyUserInLocalStorage(userObject);
+  
+        showAlert("Inicio de sesión exitoso", "success");
+  
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: `Bienvenid@ ${email}, será redirigido a la página principal en 3 segundos`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+  
+        setTimeout(() => {
+          window.location.href = "../index.html";
+        }, 1500);
+      } else {
+        // Si la respuesta no es "Usuario verificado", entonces el inicio de sesión falló
+        showAlert("El correo o contraseña son incorrectos", "danger");
+  
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "El correo o contraseña son incorrectos",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      showAlert("Ha ocurrido un error en la solicitud", "danger");
+    });
+}
+
+function verifyUserInLocalStorage(userObject) {
   let arrayUsers = [];
   arrayUsers = JSON.parse(localStorage.getItem("users")) || [];
+  
+  const userExists = arrayUsers.find((user) => user.email === userObject.email);
 
-  const loggedInUser = arrayUsers.find(
-    (user) => user.email === email && user.password === password
-  );
-
-  if (loggedInUser) {
-    
-    loggedInUser.isLoggedIn = true;
-    localStorage.setItem("users", JSON.stringify(arrayUsers)); // Save updated arrayUsers
-
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: `Bienvenid@ ${loggedInUser.fullName}, será redirigido a la página principal en 3 segundos`,
-      showConfirmButton: false,
-      timer: 1500,
-      closeOnClickOutside: false,
-    });
-
-    setTimeout(() => {
-      window.location.href = "../index.html";
-    }, 1500);
-  } else {
-    Swal.fire({
-      position: "center",
-      icon: "error",
-      title: "El correo o contraseña son incorrectos",
-      showConfirmButton: false,
-      timer: 1500,
-      closeOnClickOutside: false,
-    });
+  if (userExists) {
+    userExists.isLoggedIn = true;
+    localStorage.setItem("users", JSON.stringify(arrayUsers));
   }
-
 }
 
 function isValidFields(email) {
