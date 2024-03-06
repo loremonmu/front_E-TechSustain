@@ -178,6 +178,14 @@ button i {
   color: #03BA85; 
 }
 
+.divBTNS{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  margin: 1rem 0;
+  gap: 1rem;
+}
 
 @media screen and (max-width: 1024px){
   #products {
@@ -208,5 +216,9 @@ button i {
   }
   #buscar-container input {
     width: 60%;
+  }
+
+  .divBTNS{
+    flex-direction: column;
   }
 }

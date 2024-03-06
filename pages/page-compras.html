@@ -63,9 +63,16 @@
         Realizadas</h1>
         
       <div class="historial-shopping">
-
-        <img src="/assets/img/empty-cart.png" alt="">
-        <h2>Aún no tienes compras realizadas</h2>
+        <div id="historial-shopping-container"></div>
+        <div id="compras-vacio" style="display: none;">
+          <h2 style="padding-top: 2rem;">Aún no tienes compras realizadas</h2>
+          <img class="image-vacio" src="/assets/img/empty-cart.png" alt="">
+        </div>
+        <div>
+          <h2>Total de compras realizadas: </h2>
+          <span id="cantidad"></span>
+          <span id="total"></span>
+        </div>
       </div>
     </div>
   </section>
@@ -126,6 +133,9 @@
       <h3>Total</h3>
       <h3 id="total-cart"></h3>
     </div>
+    <div class="btn-checkout">
+      <button id="btn-comprar">Comprar</button>
+    </div>
     <div class="company-info">
       <img src="/assets/equipo-icon-e-tech-sustain.svg" alt="Logo" />
       <h4>E-Tech-Sustain</h4>
@@ -137,6 +147,7 @@
   <script src="/js/session.js"></script>
   <script src="/js/script.js"></script>
   <script src="/js/cart.js"></script>
+  <script src="/js/historialShop.js"></script>
 </body>
 
 </html>

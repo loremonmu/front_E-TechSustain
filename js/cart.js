@@ -5,6 +5,13 @@ const totalCart = document.getElementById("total-cart");
 
 document.addEventListener("DOMContentLoaded", function() {
   const cartBtns = document.querySelectorAll("#open-cart");
+  const btnComprar = document.getElementById("btn-comprar");
+  console.log(cartBtns);
+  console.log(btnComprar);
+
+  btnComprar.addEventListener("click", function() {
+    sendCarrito();
+  });
 
   cartBtns.forEach(function(cartBtn) {
     cartBtn.addEventListener("click", function() {
@@ -12,12 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
       menuMobile.classList.remove('active');
     });
   });
+
 });
 
-// cartBtn.addEventListener("click", () => {
-//   showCart.classList.toggle("active");
-//   menuMobile.classList.remove('active');
-// });
 closeBtn.addEventListener("click", () => {
   showCart.classList.remove("active");
 });
@@ -72,21 +76,6 @@ const renderCart = () => {
 
   totalCart.innerHTML = "$ " + total;
 };
-
-// const addToCart = (product) => {
-//   const cart = getCart();
-//   const newItem = {
-//     image: product.image,
-//     name: product.name,
-//     description: product.description,
-//     price: product.price,
-//     quantity: 1,
-//   };
-
-//   cart.push(newItem);
-//   updateCart(cart);
-//   renderCart();
-// };
 
 cartSection.addEventListener("click", (event) => {
   const cart = getCart();
@@ -146,11 +135,56 @@ cartSection.addEventListener("click", (event) => {
   renderCart();
 });
 
-// document.querySelectorAll(".btn-add-cart").forEach((btn) => {
-//   btn.addEventListener("click", (event) => {
-//     const product = JSON.parse(event.target.dataset.product);
-//     addToCart(product);
-//   });
-// });
-
 renderCart();
+
+const urlSendCarrito = "http://localhost:9090/carrito/create/list";
+
+function sendCarrito() {
+  const cart = getCart();
+  const user = JSON.parse(localStorage.getItem("users")).find((user) => user.isLoggedIn === true);
+  console.log(user.id);
+  console.log(JSON.stringify(cart));
+  const userId = user.id;
+  const carrito = cart.map((item) => {
+    return {
+      usuario: {
+        id: userId
+      },
+      producto: {
+        id_producto: item.id
+      },
+      cantidad: item.quantity,
+      precio_total: item.price * item.quantity
+    };
+  });
+
+  console.log(carrito);
+
+  fetch(urlSendCarrito, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(carrito),
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.text(); // Si la respuesta es exitosa, obtenemos el texto
+      } else {
+        throw new Error('Error en la solicitud');
+      }
+    })
+    .then((data) => {
+      if (data === "Carrito creado") {
+        console.log(data);
+        localStorage.removeItem("carrito");
+        renderCart();
+      } else {
+        console.log(data);
+      }
+    })
+    .catch((error) => {
+      console.log("Error: ", error);
+    });
+  
+}
