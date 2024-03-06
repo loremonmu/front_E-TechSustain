@@ -388,24 +388,62 @@ function filterProduct(value) {
   });
 }
 
-//Search button click
+
+// CUANDO NO SE ENCUENTRA EL PRODUCTO EN EL BUSCADO(SE AGREGA FOUND)
 document.getElementById("buscar").addEventListener("click", () => {
-  //initializations
-  let searchInput = document.getElementById("buscar-input").value;
+  let searchInput = document.getElementById("buscar-input").value.toUpperCase();
   let elements = document.querySelectorAll(".product-name");
   let cards = document.querySelectorAll(".card");
+  let found = false;
+  let mensajeDiv = document.getElementById("mensaje-busqueda");
 
-  //loop through all elements
+  // Limpiar mensaje si el input de búsqueda está vacío
+  if (searchInput === "") {
+    mensajeDiv.innerHTML = "";
+    mensajeDiv.classList.remove("mensaje-error");
+    // Opcional: Podrías decidir mostrar todas las tarjetas si la búsqueda está vacía
+    cards.forEach(card => card.classList.remove("hide"));
+    return; // Salir temprano si no hay entrada de búsqueda
+  }
+
+  // Bucle a través de todos los elementos
   elements.forEach((element, index) => {
-    //check if text includes the search value
-    if (element.innerText.includes(searchInput.toUpperCase())) {
-      //display matching card
+    if (element.innerText.toUpperCase().includes(searchInput)) {
       cards[index].classList.remove("hide");
+      found = true;
     } else {
-      //hide others
       cards[index].classList.add("hide");
     }
   });
+
+  // Verificar si se encontraron productos
+  if (!found) {
+    mensajeDiv.innerHTML = "El producto que buscas no se encuentra en existencia.";
+    mensajeDiv.classList.add("mensaje-error");
+  } else {
+    mensajeDiv.innerHTML = "";
+    mensajeDiv.classList.remove("mensaje-error");
+  }
+});
+window.addEventListener("focus", () => {
+  document.getElementById("mensaje-busqueda").innerHTML = "";
+  document.getElementById("mensaje-busqueda").classList.remove("mensaje-error");
+});
+
+// Función para limpiar el mensaje
+function clearSearchMessage() {
+  const mensajeDiv = document.getElementById("mensaje-busqueda");
+  mensajeDiv.innerHTML = "";
+  mensajeDiv.classList.remove("mensaje-error");
+}
+
+// Limpiar el mensaje cuando se hace clic en cualquier lugar excepto en el campo de búsqueda y el botón
+document.addEventListener("click", (event) => {
+  const mensajeDiv = document.getElementById("mensaje-busqueda");
+  // Comprobar si el mensaje está presente y si el clic no fue en el input o botón de búsqueda
+  if (mensajeDiv.innerHTML !== "" && !event.target.matches("#buscar-input, #buscar")) {
+    clearSearchMessage();
+  }
 });
 
 //Initially display all products
@@ -518,3 +556,5 @@ function renderizarProductos() {
 renderProducts(currentPage);
 // Llamar a la función para actualizar la paginación
 updatePagination();
+
+
